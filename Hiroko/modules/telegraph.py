@@ -1,13 +1,13 @@
 import os
 from telegraph import upload_file
-from Zebra import Zebra
+from Hiroko import Hiroko
 from pyrogram import filters, Client
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 
 # ------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command(["tg", "tgm", "telegraph"], prefixes=["/", "!"]))
+@Hiroko.on_message(filters.command(["tg", "tgm", "telegraph"], prefixes=["/", "!"]))
 async def telegraph(client: Client, message: Message):
     get_me = await client.get_me()
     USERNAME = get_me.username
