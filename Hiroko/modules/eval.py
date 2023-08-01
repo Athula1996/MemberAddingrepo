@@ -7,7 +7,7 @@ from contextlib import *
 from subprocess import getoutput as run
 from pyrogram import *
 from pyrogram.types import *
-from Zebra import Zebra
+from Hiroko import Hiroko
 
 
 
@@ -23,7 +23,7 @@ async def aexec(code, client, message):
 
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("sh") & filters.user(SUDO_USERS))
+@Hiroko.on_message(filters.command("sh") & filters.user(SUDO_USERS))
 def sh(_, m):
     if m.from_user.id in SUDO_USERS:
         code = m.text.replace(m.text.split(" ")[0], "")
@@ -37,7 +37,7 @@ def sh(_, m):
 
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("eval") & filters.user(SUDO_USERS))  
+@Hiroko.on_message(filters.command("eval") & filters.user(SUDO_USERS))  
 async def eval(client, message):
     status_message = await message.reply_text("ᴘʀᴏᴄᴇssɪɴɢ ...")
     if len(message.command) <2:
