@@ -1,8 +1,8 @@
 from pyrogram import Client, filters, enums
 from pyrogram.types import Message
 from config import COMMAND_HANDLER
-from Zebra import Zebra
-from Zebra.Helper.cust_p_filters import admin_filter
+from Hiroko import Hiroko
+from Hiroko.Helper.cust_p_filters import admin_filter
 
 
 pinned_text = """
@@ -16,7 +16,7 @@ pinned_text = """
 
 # ------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("pin", COMMAND_HANDLER) & admin_filter)
+@Hiroko.on_message(filters.command("pin", COMMAND_HANDLER) & admin_filter)
 def pin(_, message):
       chat = message.chat
       chat_title = message.chat.title
@@ -27,7 +27,7 @@ def pin(_, message):
       if message.chat.type == enums.ChatType.PRIVATE:
             return message.reply_text("**ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴡᴏʀᴋ ᴏɴʟʏ ᴏɴ ɢʀᴏᴜᴘs !**")
     
-      user_stats = Zebra.get_chat_member(chat_id, user_id)
+      user_stats = Hiroko.get_chat_member(chat_id, user_id)
       if user_stats.privileges.can_pin_messages and not message.reply_to_message:
          
           try:
@@ -57,7 +57,7 @@ unpinned_text = """
 
 # ------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("unpin", COMMAND_HANDLER) & admin_filter)
+@Hiroko.on_message(filters.command("unpin", COMMAND_HANDLER) & admin_filter)
 def unpin(_, message):
       chat = message.chat
       chat_title = message.chat.title
@@ -68,7 +68,7 @@ def unpin(_, message):
       if message.chat.type == enums.ChatType.PRIVATE:
             return message.reply_text("**ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴡᴏʀᴋ ᴏɴʟʏ ᴏɴ ɢʀᴏᴜᴘs !**")
     
-      user_stats = Zebra.get_chat_member(chat_id, user_id)
+      user_stats = Hiroko.get_chat_member(chat_id, user_id)
       if user_stats.privileges.can_pin_messages and not message.reply_to_message:
          
           try:
