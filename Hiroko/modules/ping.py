@@ -2,10 +2,10 @@ import time
 from asyncio import sleep as rest
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from Zebra import boot as tim
-from Zebra import Zebra
-from Zebra import OWNER_ID as owner
-from Zebra import SUDO_USERS as sudo
+from Hiroko import boot as tim
+from Hiroko import Hiroko
+from Hiroko import OWNER_ID as owner
+from Hiroko import SUDO_USERS as sudo
 from pyrogram import filters, __version__
 from platform import python_version
 
@@ -41,7 +41,7 @@ sudo.append(owner)
 
 # ------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command(["ping"], prefixes=["/", "!"]))
+@Hiroko.on_message(filters.command(["ping"], prefixes=["/", "!"]))
 async def ping(Client, m: Message):
     start_time = time.time()
     sender = m.from_user
@@ -61,7 +61,7 @@ async def ping(Client, m: Message):
 # ------------------------------------------------------------------------------- #
 
 PING_TEXT = """
-˹ᴢᴇʙꝛᴧ ꝛᴏʙᴏᴛ˼ 🇮🇳 sʏsᴛᴇᴍ sᴛᴀᴛs :
+{(await client.get_me()).mention} 🇮🇳 sʏsᴛᴇᴍ sᴛᴀᴛs :
 
 **ᴘɪɴɢ ᴘᴏɴɢ:** `{}`
 **ʙᴏᴛ ᴜᴘᴛɪᴍᴇ:** `{}`
