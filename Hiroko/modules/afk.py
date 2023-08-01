@@ -1,13 +1,13 @@
 import time
 from pyrogram import filters
 from pyrogram.types import Message
-from Zebra import Zebra
-from Zebra.Helper.db.afk_db import add_afk, is_afk, remove_afk
-from Zebra.Helper.human_read import get_readable_time
+from Hiroko import Hiroko
+from Hiroko.Helper.db.afk_db import add_afk, is_afk, remove_afk
+from Hiroko.Helper.human_read import get_readable_time
 
 
 
-@Zebra.on_message(filters.command(["afk", "brb"]))
+@Hiroko.on_message(filters.command(["afk", "brb"]))
 async def active_afk(_, message: Message):
     if message.sender_chat:
         return
