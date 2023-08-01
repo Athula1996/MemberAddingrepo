@@ -8,8 +8,8 @@ from Hiroko import Hiroko, BOT_NAME
 from pyrogram.enums import ChatType
 from pyrogram.errors import MessageNotModified
 from pyrogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
-from Zebra.Helper.database.chats import add_served_chat
-from Zebra.Helper.database.users import add_served_user
+from Hiroko.Helper.database.chats import add_served_chat
+from Hiroko.Helper.database.users import add_served_user
 
 
 # ------------------------------------------------------------------------------- #
