@@ -24,9 +24,21 @@ ADMINS_TEXT = """
 GITHUB_TEXT = """
 ᴘʀᴏᴠɪᴅᴇs ʏᴏᴜ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ɢɪᴛʜᴜʙ ᴘʀᴏғɪʟᴇ
 
- ❍ <code>/github</code> **<ᴜsᴇʀɴᴀᴍᴇ>** : **ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ɢɪᴛʜᴜʙ ᴜsᴇʀ.**
+» <code>/github</code> **<ᴜsᴇʀɴᴀᴍᴇ>** : **ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ɢɪᴛʜᴜʙ ᴜsᴇʀ.**
 """
 
+
+FUN_TEXT = """
+**ʜᴇʀᴇ ᴀʀᴇ sᴏᴍᴇ ғᴜɴ ᴄᴏᴍᴍᴀɴᴅs.**
+» <code>/dice</code> :
+» <code>/arrow</code> :
+» <code>/goal</code> :
+» <code>/luck</code> :
+» <code>/throw</code> :
+» <code>/bowling</code> :
+» <code>/react</code> or <code>/reaction</code> :
+» <code>/aq</code> or <code>/animequotes</code> :
+"""
 
 
 
