@@ -3,7 +3,7 @@ import pymongo
 from Hiroko.modules.games import DATABASE_NAME, DATABASE_URL
 
  
-myclient = pymongo.MongoClient(DATABASE_URI)
+myclient = pymongo.MongoClient(DATABASE_URL)
 mydb = myclient[DATABASE_NAME]
 mycol = mydb['USERS']
 
