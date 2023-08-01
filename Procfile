@@ -1,1 +1,1 @@
-worker: python -m Zebra
+worker: python -m Hiroko
