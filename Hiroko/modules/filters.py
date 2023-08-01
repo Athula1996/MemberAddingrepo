@@ -9,7 +9,7 @@ from pyrogram import filters, Client, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from Hiroko.Helper.database.connections_db import active_connection
 from Hiroko.Helper.database.users_db import add_user, all_users
-from Hiroko.Helper. import parser,split_quotes
+from Hiroko.Helper.utils import parser,split_quotes
 from Hiroko.Helper.database.filters_db import(
    add_filter,
    find_filter,
