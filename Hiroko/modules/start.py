@@ -138,7 +138,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 # ------------------------------------------------------------------------------- #
         
     elif query.data=="help_":        
-        reply_markup = InlineKeyboardMarkup(zebra_buttons)
+        reply_markup = InlineKeyboardMarkup(hiroko_buttons)
         try:
             await query.edit_message_text(
                 HELP_TEXT.format(query.from_user.first_name, query.from_user.id),
