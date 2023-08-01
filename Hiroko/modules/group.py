@@ -1,6 +1,6 @@
 from pyrogram import enums
 from pyrogram.enums import ChatType
-from pyrogram import filters
+from pyrogram import filters Client
 from Hiroko import Hiroko
 from Hiroko.Helper.cust_p_filters import admin_filter
 
@@ -86,7 +86,10 @@ async def setgrouptitle(_, message):
 
 # --------------------------------------------------------------------------------- #
 
-@Hiroko.on_message()
+
+
+# Promote a member to administrator
+@app.on_message()
 async def promote_member(client, message):
     if message.text == "/promote":
         chat_id = message.chat.id
@@ -98,7 +101,7 @@ async def promote_member(client, message):
             # Promote the member to administrator
             await client.promote_chat_member(
                 chat_id=chat_id,
-                user_id=message.reply_to_message.from_user.id,
+                user_id=user_id,
                 can_change_info=True,
                 can_delete_messages=True,
                 can_invite_users=True,
