@@ -1,4 +1,4 @@
-from Zebra.Helper.human_read import db
+from Hiroko.Helper.human_read import db
 
 
 usersdb = db.users
