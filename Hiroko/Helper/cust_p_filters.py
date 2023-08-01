@@ -1,6 +1,6 @@
 from pyrogram import filters
 from config import SUDO_USERS
-from Zebra.Helper.admin_check import admin_check
+from Hiroko.Helper.admin_check import admin_check
 
 
 USE_AS_BOT = True
