@@ -4,12 +4,12 @@ from time import time
 from datetime import datetime
 from config import BOT_USERNAME, OWNER_ID
 from pyrogram import filters, Client
-from Zebra import Zebra
+from Hiroko import Hiroko, BOT_NAME
 from pyrogram.enums import ChatType
 from pyrogram.errors import MessageNotModified
 from pyrogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
-from Zebra.Helper.db.chats import add_served_chat
-from Zebra.Helper.db.users import add_served_user
+from Zebra.Helper.database.chats import add_served_chat
+from Zebra.Helper.database.users import add_served_user
 
 
 # ------------------------------------------------------------------------------- #
@@ -28,26 +28,17 @@ START_IMG = (
 START_TEXT = """
 **ʜᴇʏ ᴛʜᴇʀᴇ [{}](tg://user?id={}) ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ʏᴏᴜ !**
 ━━━━━━━━━━━━━━━━━━━━━━**
-๏ ɪ ᴀᴍ ᴢᴇʙʀᴀ ᴀɴᴅ ɪ ʜᴀᴠᴇ sᴘᴇᴄɪᴀʟ ғᴇᴀᴛᴜʀᴇs
+๏ ɪ ᴀᴍ {BOT_NAME} ᴀɴᴅ ɪ ʜᴀᴠᴇ sᴘᴇᴄɪᴀʟ ғᴇᴀᴛᴜʀᴇs
 ๏ ɪ ᴀᴍ ᴅɪғғᴇʀᴇɴᴛ ғʀᴏᴍ ᴀɴᴏᴛʜᴇʀ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛs
 
-➻ ᴡᴀʀɴɪɴɢ sʏsᴛᴇᴍ
-➻ ᴀʀᴛɪғɪᴄɪᴀʟ ɪɴᴛᴇʟʟɪɢᴇɴᴄᴇ
-➻ sᴏᴍᴇ ᴄᴏᴏʟ sʏsᴛᴇᴍ
-➻ ᴀᴘᴘʀᴏᴠᴀʟs ᴀɴᴅ ᴍᴜᴄʜ ᴍᴏʀᴇ...
-━━━━━━━━━━━━━━━━━━━━━━
-๏ ᴀʟʟ ᴏғ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs ᴀʀᴇ ʟɪsᴛᴇᴅ ɪɴ 
-ᴛʜᴇ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ sᴏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴘ 
-ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ 
-ᴍʏ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ᴀɴᴅ ᴀʙɪʟɪᴛɪᴇs.
-**
+๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs**
 """
 
 
 # ------------------------------------------------------------------------------- #
 
 HELP_TEXT = """**
-» ˹ᴢᴇʙꝛᴧ ꝛᴏʙᴏᴛ˼ ᴄᴏᴏʟ ᴏʀ ᴇxᴄʟᴜsɪᴠᴇ ғᴇᴀᴛᴜʀᴇs 
+» {BOT_NAME} ᴄᴏᴏʟ ᴏʀ ᴇxᴄʟᴜsɪᴠᴇ ғᴇᴀᴛᴜʀᴇs 
 
 » ᴀʟʟ ᴏꜰ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ / ᴏʀ !
 » ɪꜰ ʏᴏᴜ ɢᴏᴛ ᴀɴʏ ɪssᴜᴇ ᴏʀ ʙᴜɢ ɪɴ ᴀɴʏ ᴄᴏᴍᴍᴀɴᴅ ᴘʟᴇᴀsᴇ ʀᴇᴘᴏʀᴛ ɪᴛ ᴀᴛ [sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ](https://t.me/TheNixaSupport)**
@@ -60,7 +51,7 @@ HELP_TEXT = """**
 
 # ------------------------------------------------------------------------------- #
 
-zebra_buttons = [              
+hiroko_buttons = [              
                 [
                     InlineKeyboardButton("ᴀғᴋ", callback_data="about_"),   
                     InlineKeyboardButton("ᴢᴏᴍʙɪᴇs", callback_data="about_"),
@@ -91,7 +82,7 @@ zebra_buttons = [
 
 # ------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command(["start"], prefixes=["/", "!"]))
+@Hiroko.on_message(filters.command(["start"], prefixes=["/", "!"]))
 async def start(client: Client, message: Message):    
         get_me = await client.get_me()
         BOT_USERNAME = get_me.username
@@ -119,7 +110,7 @@ async def start(client: Client, message: Message):
 
 # ------------------------------------------------------------------------------- #
 
-@Zebra.on_callback_query()
+@Hiroko.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
     if query.data=="home_":
         buttons =  [
