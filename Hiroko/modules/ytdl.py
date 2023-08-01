@@ -1,19 +1,19 @@
+import os
 import asyncio
 import requests
 import wget
 import yt_dlp
 from config import COMMAND_HANDLER
-import os
 from youtube_search import YoutubeSearch
 from yt_dlp import YoutubeDL
 from pyrogram import filters
 from pyrogram.types import *
-from Zebra import Zebra
+from Hiroko import Hiroko
 
 
 # ------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("video",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("video",COMMAND_HANDLER))
 async def vsong(client, message):
     ydl_opts = {
         "format": "best",
@@ -74,7 +74,7 @@ ydl_opts = {
 
 # ------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("song",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("song",COMMAND_HANDLER))
 def download_song(_, message):
     query = " ".join(message.command[1:])  
     print(query)
