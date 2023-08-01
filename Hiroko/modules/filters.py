@@ -18,6 +18,7 @@ from Hiroko.Helper.database.filters_db import(
    count_filters
 )
 
+SAVE_USER = os.environ.get("SAVE_USER", "no").lower()
 
 # ====================> ғɪʟᴛᴇʀ <==================== #
 
