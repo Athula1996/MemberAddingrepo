@@ -1,4 +1,4 @@
-from Zebra import Zebra 
+from Hiroko import Hiroko
 from pyrogram import filters 
 from pyrogram.types import Message 
 import requests 
@@ -6,7 +6,7 @@ from config import COMMAND_HANDLER
 
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("cuddle",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("cuddle",COMMAND_HANDLER))
 def cuddle(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -20,7 +20,7 @@ def cuddle(_, m: Message):
 
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("shrug",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("shrug",COMMAND_HANDLER))
 def shrug(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -34,7 +34,7 @@ def shrug(_, m: Message):
 
 # --------------------------------------------------------------------------------- #
       
-@Zebra.on_message(filters.command("poke",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("poke",COMMAND_HANDLER))
 def poke(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -48,7 +48,7 @@ def poke(_, m: Message):
 
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("facepalm",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("facepalm",COMMAND_HANDLER))
 def facepalm(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -62,7 +62,7 @@ def facepalm(_, m: Message):
             
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("stare",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("stare",COMMAND_HANDLER))
 def stare(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -76,7 +76,7 @@ def stare(_, m: Message):
             
 # --------------------------------------------------------------------------------- #
       
-@Zebra.on_message(filters.command("pout",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("pout",COMMAND_HANDLER))
 def pout(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -90,7 +90,7 @@ def pout(_, m: Message):
             
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("handhold",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("handhold",COMMAND_HANDLER))
 def handhold(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -104,7 +104,7 @@ def handhold(_, m: Message):
             
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("wave",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("wave",COMMAND_HANDLER))
 def wave(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -118,7 +118,7 @@ def wave(_, m: Message):
             
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("blush",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("blush",COMMAND_HANDLER))
 def blush(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -132,7 +132,7 @@ def blush(_, m: Message):
 
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("neko",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("neko",COMMAND_HANDLER))
 def neko(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -146,7 +146,7 @@ def neko(_, m: Message):
             
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("dance",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("dance",COMMAND_HANDLER))
 def dance(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -160,7 +160,7 @@ def dance(_, m: Message):
             
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("baka",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("baka",COMMAND_HANDLER))
 def baka(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -174,7 +174,7 @@ def baka(_, m: Message):
             
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("bore",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("bore",COMMAND_HANDLER))
 def bore(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -188,7 +188,7 @@ def bore(_, m: Message):
 
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("laugh", COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("laugh", COMMAND_HANDLER))
 def laugh(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -202,7 +202,7 @@ def laugh(_, m: Message):
             
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("smug",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("smug",COMMAND_HANDLER))
 def smug(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -216,7 +216,7 @@ def smug(_, m: Message):
             
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("thumbsup",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("thumbsup",COMMAND_HANDLER))
 def thumbsup(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -230,7 +230,7 @@ def thumbsup(_, m: Message):
             
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("shoot",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("shoot",COMMAND_HANDLER))
 def shoot(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -244,7 +244,7 @@ def shoot(_, m: Message):
             
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("tickle",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("tickle",COMMAND_HANDLER))
 def tickle(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -258,7 +258,7 @@ def tickle(_, m: Message):
             
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("feed",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("feed",COMMAND_HANDLER))
 def feed(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -272,7 +272,7 @@ def feed(_, m: Message):
             
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("think",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("think",COMMAND_HANDLER))
 def think(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -286,7 +286,7 @@ def think(_, m: Message):
             
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("wink",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("wink",COMMAND_HANDLER))
 def wink(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -300,7 +300,7 @@ def wink(_, m: Message):
             
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("sleep",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("sleep",COMMAND_HANDLER))
 def sleep(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -314,7 +314,7 @@ def sleep(_, m: Message):
             
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("punch",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("punch",COMMAND_HANDLER))
 def punch(_, m: Message):
       reply = m.reply_to_message
       if reply:
@@ -329,7 +329,7 @@ def punch(_, m: Message):
 
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("cry",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("cry",COMMAND_HANDLER))
 def cry(_, m: Message):
        reply = m.reply_to_message
        if reply:
@@ -343,7 +343,7 @@ def cry(_, m: Message):
       
  # --------------------------------------------------------------------------------- #
   
-@Zebra.on_message(filters.command("kill",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("kill",COMMAND_HANDLER))
 def kill(_, m: Message):
        reply = m.reply_to_message
        if reply:
@@ -357,7 +357,7 @@ def kill(_, m: Message):
       
 # --------------------------------------------------------------------------------- #
       
-@Zebra.on_message(filters.command("smile",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("smile",COMMAND_HANDLER))
 def smile(_, m: Message):
        reply = m.reply_to_message
        if reply:
@@ -371,7 +371,7 @@ def smile(_, m: Message):
              
  # --------------------------------------------------------------------------------- #
    
-@Zebra.on_message(filters.command("highfive",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("highfive",COMMAND_HANDLER))
 def highfive(_, m: Message):
        reply = m.reply_to_message
        if reply:
@@ -385,8 +385,8 @@ def highfive(_, m: Message):
              
 # --------------------------------------------------------------------------------- #
     
-@Zebra.on_message(filters.regex("slap"))
-@Zebra.on_message(filters.command("slap",COMMAND_HANDLER))
+@Hiroko.on_message(filters.regex("slap"))
+@Hiroko.on_message(filters.command("slap",COMMAND_HANDLER))
 def slap(_, m: Message):
        reply = m.reply_to_message
        if reply:
@@ -402,8 +402,8 @@ def slap(_, m: Message):
          
 # --------------------------------------------------------------------------------- #
      
-@Zebra.on_message(filters.regex("hug"))    
-@Zebra.on_message(filters.command("hug",COMMAND_HANDLER))
+@Hiroko.on_message(filters.regex("hug"))    
+@Hiroko.on_message(filters.command("hug",COMMAND_HANDLER))
 def hug(_, m: Message):
        reply = m.reply_to_message
        if reply:
@@ -419,8 +419,8 @@ def hug(_, m: Message):
              
  # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.regex("pat"))
-@Zebra.on_message(filters.command("pat",COMMAND_HANDLER))
+@Hiroko.on_message(filters.regex("pat"))
+@Hiroko.on_message(filters.command("pat",COMMAND_HANDLER))
 def pat(_, m: Message):
        reply = m.reply_to_message
        if reply:
@@ -436,7 +436,7 @@ def pat(_, m: Message):
              
  # --------------------------------------------------------------------------------- #
    
-@Zebra.on_message(filters.command("waifu",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("waifu",COMMAND_HANDLER))
 def waifu(_, m: Message):
        reply = m.reply_to_message
        if reply:
