@@ -5,7 +5,7 @@ from pyrogram.types import Message
 from pyrogram import enums
 from pyrogram.enums import ChatMemberStatus
 from pyrogram.errors import FloodWait
-from Zebra import Zebra
+from Hiroko import Hiroko
 
 # ------------------------------------------------------------------------------- #
 
@@ -15,17 +15,17 @@ stopProcess = False
 
 # ------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command(["zombies","clean"]))
+@Hiroko.on_message(filters.command(["zombies","clean"]))
 async def remove(client, message):
   global stopProcess
   try: 
     try:
-      sender = await Zebra.get_chat_member(message.chat.id, message.from_user.id)
+      sender = await Hiroko.get_chat_member(message.chat.id, message.from_user.id)
       has_permissions = sender.privileges
     except:
       has_permissions = message.sender_chat  
     if has_permissions:
-      bot = await Zebra.get_chat_member(message.chat.id, "self")
+      bot = await Hiroko.get_chat_member(message.chat.id, "self")
       if bot.status == ChatMemberStatus.MEMBER:
         await message.reply("➠ | ɪ ɴᴇᴇᴅ ᴀᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴs ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs.")  
       else:  
@@ -37,7 +37,7 @@ async def remove(client, message):
           else:  
             chatQueue.append(message.chat.id)  
             deletedList = []
-            async for member in Zebra.get_chat_members(message.chat.id):
+            async for member in Hiroko.get_chat_members(message.chat.id):
               if member.user.is_deleted == True:
                 deletedList.append(member.user)
               else:
@@ -49,12 +49,12 @@ async def remove(client, message):
             else:
               k = 0
               processTime = lenDeletedList*1
-              temp = await Zebra.send_message(message.chat.id, f"🧭 | ᴛᴏᴛᴀʟ ᴏғ {lenDeletedList} ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs ʜᴀs ʙᴇᴇɴ ᴅᴇᴛᴇᴄᴛᴇᴅ.\n🥀 | ᴇsᴛɪᴍᴀᴛᴇᴅ ᴛɪᴍᴇ: {processTime} sᴇᴄᴏɴᴅs ғʀᴏᴍ ɴᴏᴡ.")
+              temp = await Hiroko.send_message(message.chat.id, f"🧭 | ᴛᴏᴛᴀʟ ᴏғ {lenDeletedList} ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs ʜᴀs ʙᴇᴇɴ ᴅᴇᴛᴇᴄᴛᴇᴅ.\n🥀 | ᴇsᴛɪᴍᴀᴛᴇᴅ ᴛɪᴍᴇ: {processTime} sᴇᴄᴏɴᴅs ғʀᴏᴍ ɴᴏᴡ.")
               if stopProcess: stopProcess = False
               while len(deletedList) > 0 and not stopProcess:   
                 deletedAccount = deletedList.pop(0)
                 try:
-                  await Zebra.ban_chat_member(message.chat.id, deletedAccount.id)
+                  await Hiroko.ban_chat_member(message.chat.id, deletedAccount.id)
                 except Exception:
                   pass  
                 k+=1
@@ -74,12 +74,12 @@ async def remove(client, message):
 
 # ------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command(["admins","staff"]))
+@Hiroko.on_message(filters.command(["admins","staff"]))
 async def admins(client, message):
   try: 
     adminList = []
     ownerList = []
-    async for admin in Zebra.get_chat_members(message.chat.id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
+    async for admin in Hiroko.get_chat_members(message.chat.id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
       if admin.privileges.is_anonymous == False:
         if admin.user.is_bot == True:
           pass
@@ -101,7 +101,7 @@ async def admins(client, message):
       text2 += f"👑 ᴏᴡɴᴇʀ\n└ <i>Hidden</i>\n\n👮🏻 ᴀᴅᴍɪɴs\n"
     if len(adminList) == 0:
       text2 += "└ <i>ᴀᴅᴍɪɴs ᴀʀᴇ ʜɪᴅᴅᴇɴ</i>"  
-      await Zebra.send_message(message.chat.id, text2)   
+      await Hiroko.send_message(message.chat.id, text2)   
     else:  
       while len(adminList) > 1:
         admin = adminList.pop(0)
@@ -116,17 +116,17 @@ async def admins(client, message):
         else:
           text2 += f"└ @{admin.username}\n\n"
       text2 += f"✅ | **ᴛᴏᴛᴀʟ ɴᴜᴍʙᴇʀ ᴏғ ᴀᴅᴍɪɴs**: {lenAdminList}"  
-      await Zebra.send_message(message.chat.id, text2)           
+      await Hiroko.send_message(message.chat.id, text2)           
   except FloodWait as e:
     await asyncio.sleep(e.value)       
 
 # ------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("bots"))
+@Hiroko.on_message(filters.command("bots"))
 async def bots(client, message):  
   try:    
     botList = []
-    async for bot in Zebra.get_chat_members(message.chat.id, filter=enums.ChatMembersFilter.BOTS):
+    async for bot in Hiroko.get_chat_members(message.chat.id, filter=enums.ChatMembersFilter.BOTS):
       botList.append(bot.user)
     lenBotList = len(botList) 
     text3  = f"**ʙᴏᴛ ʟɪsᴛ - {message.chat.title}**\n\n🤖 ʙᴏᴛs\n"
@@ -137,7 +137,7 @@ async def bots(client, message):
       bot = botList.pop(0)
       text3 += f"└ @{bot.username}\n\n"
       text3 += f"✅ | *ᴛᴏᴛᴀʟ ɴᴜᴍʙᴇʀ ᴏғ ʙᴏᴛs**: {lenBotList}"  
-      await Zebra.send_message(message.chat.id, text3)
+      await Hiroko.send_message(message.chat.id, text3)
   except FloodWait as e:
     await asyncio.sleep(e.value)
     
