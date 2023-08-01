@@ -3,7 +3,7 @@ import wget
 import asyncio
 import speedtest
 from PIL import Image
-from Zebra import Zebra
+from Hiroko import Hiroko
 from pyrogram.types import Message
 from pyrogram import filters, Client as client
 
@@ -43,7 +43,7 @@ async def speedtest_function(client, message):
 **» sᴩᴏɴsᴏʀ :** {result['server']['sponsor']}
 **» ʟᴀᴛᴇɴᴄʏ :** {result['server']['latency']}  
 **» ᴩɪɴɢ :** {result['ping']}"""
-    msg = await Zebra.send_photo(
+    msg = await Hiroko.send_photo(
         chat_id=message.chat.id, 
         photo=result["share"], 
         caption=output
