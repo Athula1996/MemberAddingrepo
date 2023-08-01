@@ -2,10 +2,11 @@ import os
 import re
 import pymongo
 from pyrogram import enums
-import config
+from Hiroko.modules.games import DATABASE_NAME, DATABASE_URL
+
  
-myclient = pymongo.MongoClient(config.DATABASE_URI)
-mydb = myclient[config.DATABASE_NAME]
+myclient = pymongo.MongoClient(DATABASE_URL)
+mydb = myclient[DATABASE_NAME]
 
 
 
