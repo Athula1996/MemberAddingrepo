@@ -1,7 +1,7 @@
 import os
 import re
 import io
-import config import OWNER_ID
+from config import OWNER_ID
 import asyncio
 import pyrogram
 from Hiroko import Hiroko
