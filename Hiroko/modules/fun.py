@@ -3,7 +3,7 @@ from pyrogram.types import Message
 import asyncio
 import random, re
 import requests 
-from Zebra import Zebra
+from Hiroko import Hiroko
 
 
 
@@ -127,43 +127,43 @@ reactions = [
 
 # --------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("dice"))
+@Hiroko.on_message(filters.command("dice"))
 async def roll_dice(bot, message):
     await bot.send_dice(message.chat.id, "🎲")
 
-@Zebra.on_message(filters.command("arrow"))                                      
+@Hiroko.on_message(filters.command("arrow"))                                      
 async def roll_arrow(bot, message):
     await bot.send_dice(message.chat.id, "🎯")
 
-@Zebra.on_message(filters.command("goal"))
+@Hiroko.on_message(filters.command("goal"))
 async def roll_goal(bot, message):
     await bot.send_dice(message.chat.id, "⚽️")
 
-@Zebra.on_message(filters.command("luck"))
+@Hiroko.on_message(filters.command("luck"))
 async def roll_luck(bot, message):
     await bot.send_dice(message.chat.id, "🎰")
 
-@Zebra.on_message(filters.command("throw"))
+@Hiroko.on_message(filters.command("throw"))
 async def roll_throw(bot, message):
     await bot.send_dice(message.chat.id, "🏀")
 
-@Zebra.on_message(filters.command(["bowling", "tenpins"]))
+@Hiroko.on_message(filters.command(["bowling", "tenpins"]))
 async def roll_bowling(bot, message):
     await bot.send_dice(message.chat.id, "🎳")
 
-@Zebra.on_message(filters.command(["react", "reaction"]))
+@Hiroko.on_message(filters.command(["react", "reaction"]))
 def reaction (_, message):
     if message.reply_to_message:
          return message.reply_to_message.reply_text(random.choice(reactions))  
     else:
          message.reply_text(random.choice(reactions))
 
-@Zebra.on_message(filters.command(["aq","animequotes"]))
+@Hiroko.on_message(filters.command(["aq","animequotes"]))
 def animequotes(_, message):
       message.reply_photo(random.choice(QUOTES_IMG))
 
 
-@Zebra.on_message(filters.command("dare"))
+@Hiroko.on_message(filters.command("dare"))
 async def dare(_, m):
          reply = m.reply_to_message
          if reply:
@@ -185,7 +185,7 @@ async def dare(_, m):
                await m.reply_text(dare)
                
 
-@Zebra.on_message(filters.command("truth"))
+@Hiroko.on_message(filters.command("truth"))
 async def truth(_, m):
          reply = m.reply_to_message
          if reply:
