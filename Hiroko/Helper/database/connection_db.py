@@ -1,9 +1,11 @@
 import os
 import pymongo
-import config
- 
-myclient = pymongo.MongoClient(config.DATABASE_URI)
-mydb = myclient[config.DATABASE_NAME]
+from Hiroko.modules.games import DATABASE_NAME, DATABASE_URL
+
+
+
+myclient = pymongo.MongoClient(DATABASE_URL)
+mydb = myclient[DATABASE_NAME]
 mycol = mydb['CONNECTION']   
 
 
