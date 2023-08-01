@@ -1,17 +1,17 @@
 import asyncio
 import importlib
 from pyrogram import idle
-from Zebra.modules import ALL_MODULES
+from Hiroko.modules import ALL_MODULES
 
 loop = asyncio.get_event_loop()
 
 
 async def sumit_boot():
     for all_module in ALL_MODULES:
-        importlib.import_module("Zebra.modules." + all_module)
-    print("────────────BOT START────────────")
+        importlib.import_module("Hiroko.modules." + all_module)
+    print("»»»» ʜᴇʀᴏᴋᴏ ʀᴏʙᴏᴛ ᴅᴇᴘʟᴏʏ sᴜᴄᴄᴇssғᴜʟʟʏ ✨ 🎉")
     await idle()
-    print("GoodBye! Stopping Bot")
+    print("»» ɢᴏᴏᴅ ʙʏᴇ ! sᴛᴏᴘᴘɪɴɢ ʙᴏᴛ.")
 
 
 if __name__ == "__main__":
