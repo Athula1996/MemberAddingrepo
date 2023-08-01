@@ -1,7 +1,7 @@
 import asyncio
 from pyrogram import Client, filters
 from pyrogram.enums import ChatType
-from Zebra import Zebra
+from Hiroko import Hiroko
 from config import COMMAND_HANDLER
 from Zebra.Helper.cust_p_filters import admin_filter
 
@@ -11,7 +11,7 @@ TG_MAX_SELECT_LEN = 200
 
 # ------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("purge", COMMAND_HANDLER) & admin_filter)
+@Hiroko.on_message(filters.command("purge", COMMAND_HANDLER) & admin_filter)
 async def purge(client, message):
     """ purge upto the replied message """
     if message.chat.type not in [ChatType.SUPERGROUP, ChatType.CHANNEL]:        
