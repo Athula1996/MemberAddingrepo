@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.enums import ChatType
 from Hiroko import Hiroko
 from config import COMMAND_HANDLER
-from Zebra.Helper.cust_p_filters import admin_filter
+from Hiroko.Helper.cust_p_filters import admin_filter
 
 # ------------------------------------------------------------------------------- #
 
