@@ -20,18 +20,18 @@ logging.basicConfig(
 
 
 
-Zebra = Client(
-    ":Zebra:",
+Hiroko = Client(
+    ":Hiroko:",
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=config.BOT_TOKEN,
 )
 
 
-async def Zebra_bot():
+async def Hiroko_bot():
     global BOT_ID, BOT_NAME, BOT_USERNAME
-    await Zebra.start()
-    getme = await Zebra.get_me()
+    await Hiroko.start()
+    getme = await Hiroko.get_me()
     BOT_ID = getme.id
     BOT_USERNAME = getme.username
     if getme.last_name:
@@ -40,6 +40,6 @@ async def Zebra_bot():
         BOT_NAME = getme.first_name
 
 
-loop.run_until_complete(Zebra_bot())
+loop.run_until_complete(Hiroko_bot())
 
 
