@@ -68,15 +68,10 @@ hiroko_buttons = [
                     InlineKeyboardButton("sʜᴏʀᴛᴇɴᴇʀ", callback_data="about_")
                 ],
                 [
-                    InlineKeyboardButton("ᴅᴇᴠ", callback_data="about_"),   
+                    InlineKeyboardButton("ɢᴀᴍᴇs", callback_data="about_"),   
                     InlineKeyboardButton("ᴄʜᴀᴛɢᴘᴛ", callback_data="about_"),
                     InlineKeyboardButton("ᴀᴄᴛɪᴏɴ", callback_data="about_")
-                ],
-                [
-                    InlineKeyboardButton("ᴛʀᴀɴsʟᴀᴛᴇ", callback_data="about_"),   
-                    InlineKeyboardButton("ɢᴀᴍᴇs", callback_data="about_"),
-                    InlineKeyboardButton("ᴡɪᴋɪᴘᴇᴅɪᴀ", callback_data="about_")
-                ],
+                ],             
                 [
                     InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="home_"),
                     InlineKeyboardButton("⟲ ᴄʟᴏꜱᴇ ⟳", callback_data="close_data")
