@@ -26,7 +26,7 @@ def testspeed(m):
 
 # ------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command(["speedtest"], prefixes=["/", "!"]))
+@Hiroko.on_message(filters.command(["speedtest"], prefixes=["/", "!"]))
 async def speedtest_function(client, message):
     m = await message.reply_text("💫 ᴛʀʏɪɴɢ ᴛᴏ ᴄʜᴇᴄᴋ ᴜᴩʟᴏᴀᴅ ᴀɴᴅ ᴅᴏᴡɴʟᴏᴀᴅ sᴩᴇᴇᴅ...")
     loop = asyncio.get_event_loop()
