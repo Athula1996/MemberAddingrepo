@@ -2,7 +2,7 @@ import time
 from pyrogram import filters
 from pyrogram.types import Message
 from Hiroko import Hiroko
-from Hiroko.Helper.db.afk_db import add_afk, is_afk, remove_afk
+from Hiroko.Helper.database.afk_db import add_afk, is_afk, remove_afk
 from Hiroko.Helper.human_read import get_readable_time
 
 
