@@ -54,7 +54,7 @@ HELP_TEXT = """**
 hiroko_buttons = [              
                 [
                     InlineKeyboardButton("ᴀғᴋ", callback_data="about_"),   
-                    InlineKeyboardButton("ᴢᴏᴍʙɪᴇs", callback_data="about_"),
+                    InlineKeyboardButton("ᴀᴅᴍɪɴs", callback_data="about_"),
                     InlineKeyboardButton("ғᴜɴ", callback_data="about_")
                 ],
                 [
@@ -63,14 +63,19 @@ hiroko_buttons = [
                     InlineKeyboardButton("ɴᴇᴋᴏs", callback_data="about_")
                 ],
                 [
-                    InlineKeyboardButton("ᴍɪsᴄ", callback_data="about_"),   
-                    InlineKeyboardButton("ᴄʜᴀᴛʙᴏᴛ", callback_data="about_"),
+                    InlineKeyboardButton("ᴄʜᴀᴛʙᴏᴛ", callback_data="about_"),   
+                    InlineKeyboardButton("ᴍɪsᴄ", callback_data="about_"),
                     InlineKeyboardButton("sʜᴏʀᴛᴇɴᴇʀ", callback_data="about_")
                 ],
                 [
                     InlineKeyboardButton("ᴅᴇᴠ", callback_data="about_"),   
-                    InlineKeyboardButton("ʟᴏᴄᴋs", callback_data="about_"),
+                    InlineKeyboardButton("ᴄʜᴀᴛɢᴘᴛ", callback_data="about_"),
                     InlineKeyboardButton("ᴀᴄᴛɪᴏɴ", callback_data="about_")
+                ],
+                [
+                    InlineKeyboardButton("ᴛʀᴀɴsʟᴀᴛᴇ", callback_data="about_"),   
+                    InlineKeyboardButton("ɢᴀᴍᴇs", callback_data="about_"),
+                    InlineKeyboardButton("ᴡɪᴋɪᴘᴇᴅɪᴀ", callback_data="about_")
                 ],
                 [
                     InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="home_"),
