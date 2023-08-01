@@ -86,26 +86,29 @@ async def setgrouptitle(_, message):
 
 # --------------------------------------------------------------------------------- #
 
-@Hiroko.on_message(filters.command("setbio") & admin_filter)
-async def set_chat_description(_, message):
-    chat_id = message.chat.id
-    user_id = message.from_user.id
-    msg = await message.reply_text("Processing....")
-    admin_check = await Hiroko.get_chat_member(chat_id, user_id)
-    if message.chat.type == enums.ChatType.PRIVATE:
-        await msg.edit("`This command works on groups only!`")
-        return
-    try:
-        if admin_check.status.can_change_info:
-            await Hiroko.set_chat_description(chat_id)
-            await msg.edit(
-                "**Successfully set group bio!**\n**By:** {}".format(message.from_user.mention)
+@Hiroko.on_message()
+async def promote_member(client, message):
+    if message.text == "/promote":
+        chat_id = message.chat.id
+        user_id = message.from_user.id
+        
+        # Check if the user is an admin
+        admin_check = await client.get_chat_member(chat_id, user_id)
+        if admin_check.status in ["creator", "administrator"]:
+            # Promote the member to administrator
+            await client.promote_chat_member(
+                chat_id=chat_id,
+                user_id=message.reply_to_message.from_user.id,
+                can_change_info=True,
+                can_delete_messages=True,
+                can_invite_users=True,
+                can_restrict_members=True,
+                can_pin_messages=True,
+                can_promote_members=False
             )
-    except:
-        await msg.edit(
-            "**The user must have change info admin rights to set group bio!**"
-        )
-
+            await message.reply_text("User promoted to administrator!")
+        else:
+            await message.reply_text("You need to be an admin to promote members!")
 
 
 # --------------------------------------------------------------------------------- #
