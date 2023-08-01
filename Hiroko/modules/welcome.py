@@ -1,10 +1,10 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from Zebra import Zebra
+from Hiroko import Hiroko
 
 # ------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.new_chat_members)
+@Hiroko.on_message(filters.new_chat_members)
 def welcome_message(client: Client, message: Message):
       chat_id = message.chat.id
       member_names = [member.first_name for member in message.new_chat_members]
