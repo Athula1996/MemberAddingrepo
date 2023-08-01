@@ -88,33 +88,3 @@ async def setgrouptitle(_, message):
 
 
 
-# Promote a member to administrator
-@Hiroko.on_message()
-async def promote_member(client, message):
-    if message.text == "/promote":
-        chat_id = message.chat.id
-        user_id = message.from_user.id
-        
-        # Check if the user is an admin
-        admin_check = await client.get_chat_member(chat_id, user_id)
-        if admin_check.status in ["creator", "administrator"]:
-            # Promote the member to administrator
-            await client.promote_chat_member(
-                chat_id=chat_id,
-                user_id=user_id,
-                can_change_info=True,
-                can_delete_messages=True,
-                can_invite_users=True,
-                can_restrict_members=True,
-                can_pin_messages=True,
-                can_promote_members=False
-            )
-            await message.reply_text("User promoted to administrator!")
-        else:
-            await message.reply_text("You need to be an admin to promote members!")
-
-
-# --------------------------------------------------------------------------------- #
-
-
-
