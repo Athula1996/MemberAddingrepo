@@ -1,6 +1,6 @@
 from pyrogram import enums
 from pyrogram.enums import ChatType
-from pyrogram import filters Client
+from pyrogram import filters, Client
 from Hiroko import Hiroko
 from Hiroko.Helper.cust_p_filters import admin_filter
 
