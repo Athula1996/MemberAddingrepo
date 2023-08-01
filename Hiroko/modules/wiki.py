@@ -1,12 +1,12 @@
 import wikipedia
 from config import COMMAND_HANDLER
 from pyrogram import filters
-from Zebra import Zebra
+from Hiroko import Hiroko
 from pyrogram.enums import ParseMode
 
 # ------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("wiki",COMMAND_HANDLER))
+@Hiroko.on_message(filters.command("wiki",COMMAND_HANDLER))
 async def wikipediasearch(_, message):
     reply = message.reply_to_message
     if len(message.command) < 2:
