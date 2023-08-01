@@ -86,21 +86,26 @@ async def setgrouptitle(_, message):
 
 # --------------------------------------------------------------------------------- #
 
-@Hiroko.on_message(filters.command("setbio")& admin_filter)
+@Hiroko.on_message(filters.command("setbio") & admin_filter)
 async def set_chat_description(_, message):
-      
-      chat_id = message.chat.id
-      user_id = message.from_user.id
-      msg = await message.reply_text("ᴘʀᴏᴄᴇssɪɴɢ....")
-      admin_check = await Hiroko.get_chat_member(chat_id, user_id)
-      if message.chat.type == enums.ChatType.PRIVATE:
-           await msg.edit("`ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴡᴏʀᴋ ᴏɴ ɢʀᴏᴜᴘs !`") 
-      try:
-         if admin_check.privileges.can_change_info:
-             await Hiroko.set_chat_description(chat_id)
-             await msg.edit("**sᴜᴄᴄᴇssғᴜʟʟʏ set ɢʀᴏᴜᴘ bio  ɪɴsᴇʀᴛ !\nʙʏ** {}".format(message.from_user.mention))    
-      except:
-          await msg.edit("**ᴛʜᴇ ᴜsᴇʀ ᴍᴏsᴛ ɴᴇᴇᴅ ᴄʜᴀɴɢᴇ ɪɴғᴏ ᴀᴅᴍɪɴ ʀɪɢʜᴛs ᴛᴏ ʀᴇᴍᴏᴠᴇ ɢʀᴏᴜᴘ ᴘʜᴏᴛᴏ !**")
+    chat_id = message.chat.id
+    user_id = message.from_user.id
+    msg = await message.reply_text("Processing....")
+    admin_check = await Hiroko.get_chat_member(chat_id, user_id)
+    if message.chat.type == enums.ChatType.PRIVATE:
+        await msg.edit("`This command works on groups only!`")
+        return
+    try:
+        if admin_check.status.can_change_info:
+            await Hiroko.set_chat_description(chat_id)
+            await msg.edit(
+                "**Successfully set group bio!**\n**By:** {}".format(message.from_user.mention)
+            )
+    except:
+        await msg.edit(
+            "**The user must have change info admin rights to set group bio!**"
+        )
+
 
 
 # --------------------------------------------------------------------------------- #
