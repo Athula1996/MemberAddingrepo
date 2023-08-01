@@ -89,7 +89,7 @@ async def setgrouptitle(_, message):
 
 
 # Promote a member to administrator
-@app.on_message()
+@Hiroko.on_message()
 async def promote_member(client, message):
     if message.text == "/promote":
         chat_id = message.chat.id
