@@ -1,7 +1,11 @@
 import asyncio
 import importlib
 from pyrogram import idle
+from Hiroko import Hiroko
 from Hiroko.modules import ALL_MODULES
+
+ ph = "https://telegra.ph/file/72cd2eea3eec37c807499.jpg"
+
 
 loop = asyncio.get_event_loop()
 
@@ -10,6 +14,7 @@ async def sumit_boot():
     for all_module in ALL_MODULES:
         importlib.import_module("Hiroko.modules." + all_module)
     print("»»»» ʜᴇʀᴏᴋᴏ ʀᴏʙᴏᴛ ᴅᴇᴘʟᴏʏ sᴜᴄᴄᴇssғᴜʟʟʏ ✨ 🎉")
+    await Hiroko.send_photo(chat_id=-1001328686560, photo=ph, caption="»»»» ʜᴇʀᴏᴋᴏ ʀᴏʙᴏᴛ ᴅᴇᴘʟᴏʏ sᴜᴄᴄᴇssғᴜʟʟʏ ✨ 🎉")
     await idle()
     print("»» ɢᴏᴏᴅ ʙʏᴇ ! sᴛᴏᴘᴘɪɴɢ ʙᴏᴛ.")
 
