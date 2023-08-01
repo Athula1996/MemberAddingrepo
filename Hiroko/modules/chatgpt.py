@@ -2,7 +2,7 @@ import time
 from pyrogram import Client, filters
 import openai
 from bardapi import Bard
-from Zebra import Zebra 
+from Hiroko import Hiroko
 from pyrogram.enums import ChatAction, ParseMode
 from typing import Union, List
 
@@ -17,7 +17,7 @@ openai.api_key = "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"
 
 
 
-@Zebra.on_message(filters.command(["chatgpt","zebra","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"]))
+@Hiroko.on_message(filters.command(["chatgpt","zebra","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"]))
 async def chat(bot, message):
     
     try:
@@ -41,7 +41,7 @@ async def chat(bot, message):
 
 """
    
-@Zebra.on_message(filters.command("bard"))
+@Hiroko.on_message(filters.command("bard"))
 async def bard_bot(bot, message):
     try:
         start_time = time.time()
@@ -58,7 +58,7 @@ async def bard_bot(bot, message):
 
 
 
-@Zebra.on_message(commandpro(["zebra", "@ZebraXRobot"]))
+@Hiroko.on_message(commandpro(["Hiroko", "@HirokoRobot"]))
 async def bard_bot(bot, message):
     try:
         start_time = time.time()
@@ -75,7 +75,7 @@ async def bard_bot(bot, message):
 
 """
 
-@Zebra.on_message(filters.command(["image","photo","img","generate"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"] ))
+@Hiroko.on_message(filters.command(["image","photo","img","generate"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"] ))
 async def chat(bot, message):
     try:
         start_time = time.time()
