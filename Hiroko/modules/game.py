@@ -3,7 +3,7 @@ import random
 from datetime import datetime, timedelta
 from pyrogram import Client, filters
 from pymongo import MongoClient
-from Zebra import Zebra
+from Hiroko import Hiroko
 
 
 # ------------------------------------------------------------------------------- #
@@ -51,7 +51,7 @@ database = Database(DATABASE_URL, DATABASE_NAME)
 
 # ------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("rewards", prefixes=["/", "!"]))
+@Hiroko.on_message(filters.command("rewards", prefixes=["/", "!"]))
 def start_command_handler(client, message):
     user_id = message.from_user.id
     user = database.find_user(user_id)
@@ -71,7 +71,7 @@ def start_command_handler(client, message):
 
 # ------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("bet", prefixes=["/", "!"]))
+@Hiroko.on_message(filters.command("bet", prefixes=["/", "!"]))
 def bet_command_handler(client, message):
     user_id = message.from_user.id
     user = database.find_user(user_id)
@@ -109,7 +109,7 @@ def bet_command_handler(client, message):
 # ------------------------------------------------------------------------------- #
 
 
-@Zebra.on_message(filters.command("bonus", prefixes=["/", "!"]))
+@Hiroko.on_message(filters.command("bonus", prefixes=["/", "!"]))
 def bonus_command_handler(client, message):
     user_id = message.from_user.id
     user = database.find_user(user_id)
@@ -132,7 +132,7 @@ def bonus_command_handler(client, message):
 
 # ------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("leaderboards", prefixes=["/", "!"]))
+@Hiroko.on_message(filters.command("leaderboards", prefixes=["/", "!"]))
 def leaderboard_command_handler(client, message):
     top_10_users = database.get_top_users()
 
@@ -148,7 +148,7 @@ def leaderboard_command_handler(client, message):
 
 # ------------------------------------------------------------------------------- #
 
-@Zebra.on_message(filters.command("topusers", prefixes=["/", "!"]))
+@Hiroko.on_message(filters.command("topusers", prefixes=["/", "!"]))
 def topuser_command_handler(client, message):
     top_user = database.get_top_user()
     user_info = client.get_chat_member(message.chat.id, top_user['user_id']).user
