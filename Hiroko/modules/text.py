@@ -43,17 +43,17 @@ GITHUB_TEXT = """
 FUN_TEXT = """
 **ʜᴇʀᴇ ɪs sᴏᴍᴇ ғᴜɴ ᴄᴏᴍᴍᴀɴᴅs.**
 
-» <code>/dice</code> :
+» <code>/dice</code> : **sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴅɪᴄᴇ ɴᴜᴍʙᴇʀ.**
 
-» <code>/arrow</code> :
+» <code>/arrow</code> : **sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴀʀʀᴏᴡ.**
 
-» <code>/goal</code> :
+» <code>/goal</code> : **ᴇɴᴊᴏʏ ᴛʜᴇ ɢᴏᴀʟ ɢᴀᴍᴇ.**
 
-» <code>/luck</code> :
+» <code>/luck</code> : **ᴄʜᴇᴄᴋ ʏᴏᴜʀ ʟᴜᴄᴋ ɪɴ ᴛʜᴇ ɢᴀᴍᴇ.**
 
-» <code>/throw</code> :
+» <code>/throw</code> : **ᴇɴᴊᴏʏ ᴛʜᴇ ᴛʜʀᴏᴡ ɢᴀᴍᴇ.**
 
-» <code>/bowling</code> :
+» <code>/bowling</code> : **ᴇɴᴊᴏʏɪɴɢ ᴛʜᴇ ʙᴏᴡʟɪɴɢ ɢᴀᴍᴇ.**
 
 » <code>/react</code> ᴏʀ <code>/reaction</code> : **ʀᴇᴀᴄᴛ ᴡɪᴛʜ ᴀ ʀᴀɴᴅᴏᴍ ʀᴇᴀᴄᴛɪᴏɴ.** 
 
@@ -72,13 +72,13 @@ MISC_TEXT = """
 
 » <code>/wiki</code> : **sᴇᴀʀᴄʜ ғᴏʀ ᴛᴇxᴛ ᴡʀɪᴛᴛᴇɴ ғʀᴏᴍ ᴛʜᴇ ᴡɪᴋɪᴘᴇᴅɪᴀ sᴏᴜʀᴄᴇ.**
 
-» <code>/video</code> :
+» <code>/video</code> : **ɢᴇᴛ ᴠɪᴅᴇᴏ ғɪʟᴇ ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ.**
 
-» <code>/song</code> :
+» <code>/song</code> : **ɢᴇᴛ ᴀᴜᴅɪᴏ ғɪʟᴇ ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ.**
 
-» <code>/tg</code> ᴏʀ <code>/telegraph</code> :
+» <code>/tg</code> ᴏʀ <code>/telegraph</code> : **ɢᴇᴛ ᴛᴇʟᴇɢʀᴀᴘʜ ʟɪɴᴋ ᴏʀ ʀᴇᴘʟɪᴇᴅ ᴍᴇᴅɪᴀ.**
 
-» <code>/speedtest</code> :
+» <code>/speedtest</code> : **ʀᴜɴs ᴀ sᴘᴇᴇᴅᴛᴇsᴛ ᴀɴᴅ ᴄʜᴇᴄᴋ ᴛʜᴇ sᴇʀᴠᴇʀ sᴘᴇᴇᴅ.**
 
 » <code>/admins</code> ᴏʀ <code>/staff</code> : **ʟɪsᴛ ᴏғ ᴀᴅᴍɪɴs ɪɴ ᴛʜᴇ ᴄʜᴀᴛ**
 
