@@ -1,4 +1,4 @@
-impor openai
+import openai
 from Hiroko import Hiroko
 from pyrogram import Client
 from pyrogram.raw.functions.messages import GetHistory
