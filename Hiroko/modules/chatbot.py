@@ -1,6 +1,6 @@
 import openai
 from Hiroko import Hiroko
-from pyrogram import Client
+from pyrogram import Client as client
 from pyrogram.raw.functions.messages import GetHistory
 from pyrogram.raw.functions.channels import GetFullChannel
 
