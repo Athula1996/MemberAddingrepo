@@ -81,6 +81,37 @@ MISC_TEXT = """
 
 
 NEKOS_TEXT = """
+/cuddle
+/shrug
+/poke
+/facepalm
+/stare
+/pout
+/handhold
+/wave
+/blush
+/neko
+/dance
+/baka
+/bore
+/laugh
+/smug
+/thumsup
+/shoot
+/tickle
+/feed
+/think
+/wink
+/sleep
+/puch
+/cry
+/kill
+/smile
+/highfive
+/slap
+/hug
+/pat
+/waifu
 
 """
 
