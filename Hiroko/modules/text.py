@@ -128,28 +128,28 @@ NEKOS_TEXT = """
 GAMES_TEXT = """
 **ʜᴇʀᴇ ɪs sᴏᴍᴇ ɢᴀᴍᴇ ᴄᴏᴍᴍᴀɴᴅs.**
 
-» <code>/bet</code> :
-» <code>/rewards</code> :
-» <code>/bonus</code> :
-» <code>/topusers</code> :
-» <code>/truth</code> :
-» <code>/dare</code> :
+» <code>/bet</code> : **ʙᴇᴛ sᴏᴍᴇ ᴄᴏɪɴs** 
+» <code>/rewards</code> : **ɢᴇᴛ ʀᴇᴡᴀʀᴅs ғᴏʀ ғɪʀsᴛ ᴜsᴇʀs.**
+» <code>/bonus</code> : **ɢᴇᴛ ᴡᴇᴇᴋʟʏ ʙᴏɴᴜs.** 
+» <code>/topusers</code> : **ɴᴏ. 1 ᴜsᴇʀ ᴡʜᴏ ɢᴇᴛ ᴍᴀxɪᴍᴜᴍ ᴘʀᴏғɪᴛs.**
+» <code>/truth</code> : **sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴛʀᴜᴛʜ sᴛʀɪɴɢ.**
+» <code>/dare</code> : **sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴅᴀʀᴇ sᴛʀɪɴɢ.**
 """
 
 
 CHATGPT_TEXT = """
 **ʜᴇʀᴇ ɪs sᴏᴍᴇ ᴀɪ ᴄᴏᴍᴍᴀɴᴅs.**
 
-» <code>/ask</code> ᴏʀ <code>/chatgpt</code> :
-» <code>/bard</code> :
-» <code>/image</code> ᴏʀ <code>/generate</code> :
+» <code>/ask</code> ᴏʀ <code>/chatgpt</code> : **ᴀsᴋ ʏᴏᴜʀ ǫᴜᴇsᴛɪᴏɴ ᴀɴᴅ ᴀɴʏ ǫᴜᴇʀʏ ᴄʜᴀᴛɢᴘᴛ sᴏʟᴠᴇᴅ ʏᴏᴜʀ ᴘʀᴏʙʟᴇᴍ.**
+» <code>/bard</code> :**ᴀsᴋ ʏᴏᴜʀ ǫᴜᴇsᴛɪᴏɴ ᴀɴᴅ ǫᴜᴇʀʏ ɢᴏᴏɢʟᴇ ʙᴀʀᴅ sᴏʟᴠᴇ ʏᴏᴜʀ ᴘʀᴏʙʟᴇᴍ.**
+» <code>/image</code> ᴏʀ <code>/generate</code> : **ᴄʜᴀᴛɢᴘᴛ ɢᴇɴᴇʀᴀᴛᴇ ʀᴀɴᴅᴏᴍ ɪᴍᴀɢᴇ.**
 """
 
 
 CHATBOT_TEXT = """
 **ʜᴇʀᴇ ɪs ᴄʜᴀᴛʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs**
 
-<code>/chatbot</code> :
+<code>/chatbot</code> : **ᴄʜᴀᴛʙᴏᴛ ᴇɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅ.**
 """
 
 
