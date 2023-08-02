@@ -90,37 +90,37 @@ MISC_TEXT = """
 NEKOS_TEXT = """
 **ʜᴇʀᴇ ɪs sᴏᴍᴇ ɴᴇᴋᴏs ᴄᴏᴍᴍᴀɴᴅs.**
 
-» <code>/cuddle</code> :
-» <code>/shrug</code> :
-» <code>/poke</code> :
-» <code>/facepalm</code> :
-» <code>/stare</code> :
-» <code>/pout</code> :
-» <code>/handhold</code> :
-» <code>/wave</code> :
-» <code>/blush</code> :
-» <code>/neko</code> :
-» <code>/dance</code> :
-» <code>/baka</code> :
-» <code>/bore</code> :
-» <code>/laugh</code> :
-» <code>/smug</code> : 
-» <code>/thumsup</code> :
-» <code>/shoot</code> :
-» <code>/tickle</code> :
-» <code>/feed</code> :
-» <code>/think</code> :
-» <code>/wink</code> :
-» <code>/sleep</code> :
-» <code>/puch</code> :
-» <code>/cry</code> :
-» <code>/kill</code> :
-» <code>/smile</code> :
-» <code>/highfive</code> :
-» <code>/slap</code> :
-» <code>/hug</code> :
-» <code>/pat</code> :
-» <code>/waifu</code> :
+» <code>/cuddle</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴄᴜᴅᴅʟᴇ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/shrug</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ sʜʀᴜɢ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/poke</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴘᴏᴋᴇ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/facepalm</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ғᴀᴄᴇᴘᴀʟᴍ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/stare</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ sᴛᴀʀᴇ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/pout</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴘᴏᴜᴛ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/handhold</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ʜᴀɴᴅʜᴏʟᴅ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/wave</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴡᴀᴠᴇ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/blush</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ʙʟᴜsʜ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/neko</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ɴᴇᴋᴏ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/dance</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴅᴀɴᴄᴇ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/baka</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ʙᴀᴋᴀ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/bore</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ʙᴏʀᴇ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/laugh</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ʟᴀᴜɢʜ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/smug</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ sᴍᴜɢ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/thumsup</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴛʜᴜᴍsᴜʙ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/shoot</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ sʜᴏᴏᴛ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/tickle</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴛɪᴄᴋʟᴇ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/feed</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ғᴇᴇᴅ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/think</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴛʜɪɴᴋ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/wink</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴡɪɴᴋ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/sleep</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ sʟᴇᴇᴘ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/puch</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴘᴜᴄʜ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/cry</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴄʀʏ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/kill</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴋɪʟʟ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/smile</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ sᴍɪʟᴇ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/highfive</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ʜɪɢʜғɪᴠᴇ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/slap</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ sʟᴀᴘ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/hug</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ʜᴜɢ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/pat</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴘᴀᴛ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/waifu</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴡᴀɪғᴜ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
 
 """
 
