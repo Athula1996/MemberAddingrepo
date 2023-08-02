@@ -13,6 +13,8 @@ SHORTENER_TEXT = """
 
 
 ADMINS_TEXT = """
+**ʜᴇʀᴇ ɪs sᴏᴍᴇ ᴀᴅᴍɪɴs ᴄᴏᴍᴍᴀɴᴅs.**
+
 » <code>/zombies</code> : **ʀᴇᴍᴏᴠᴇs ᴛʜᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs ғʀᴏᴍ ᴛʜᴇ ɢʀᴏᴜᴘ.**
 
 » <code>/pin</code> : **ᴘɪɴs ᴛʜᴇ ᴍᴇssᴀɢᴇ ʀᴇᴘʟɪᴇᴅ ᴛᴏ - ᴀᴅᴅ 'ʟᴏᴜᴅ' ᴏʀ 'ɴᴏᴛɪғʏ' ᴛᴏ ɢɪᴠᴇ ɴᴏᴛɪғʏ ᴛᴏ ᴜsᴇʀs.**
@@ -30,6 +32,8 @@ ADMINS_TEXT = """
 
 
 GITHUB_TEXT = """
+**ʜᴇʀᴇ ɪs sᴏᴍᴇ ɢɪᴛʜᴜʙ ᴄᴏᴍᴍᴀɴᴅs.**
+
 ᴘʀᴏᴠɪᴅᴇs ʏᴏᴜ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ɢɪᴛʜᴜʙ ᴘʀᴏғɪʟᴇ
 
 » <code>/github</code> **<ᴜsᴇʀɴᴀᴍᴇ>** : **ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ɢɪᴛʜᴜʙ ᴜsᴇʀ.**
@@ -37,7 +41,8 @@ GITHUB_TEXT = """
 
 
 FUN_TEXT = """
-**ʜᴇʀᴇ ᴀʀᴇ sᴏᴍᴇ ғᴜɴ ᴄᴏᴍᴍᴀɴᴅs.**
+**ʜᴇʀᴇ ɪs sᴏᴍᴇ ғᴜɴ ᴄᴏᴍᴍᴀɴᴅs.**
+
 » <code>/dice</code> :
 
 » <code>/arrow</code> :
@@ -57,6 +62,8 @@ FUN_TEXT = """
 
 
 MISC_TEXT = """
+**ʜᴇʀᴇ ɪs sᴏᴍᴇ ᴍɪsᴄ ᴄᴏᴍᴍᴀɴᴅs.**
+
 » /id: **ɢᴇᴛ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ɢʀᴏᴜᴘ ɪᴅ. ɪғ ᴜsᴇᴅ ʙʏ ʀᴇᴘʟʏɪɴɢ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ, ɢᴇᴛs ᴛʜᴀᴛ ᴜsᴇʀ's ɪᴅ.**
 
 » /info: **ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ᴜsᴇʀ.**
@@ -81,6 +88,8 @@ MISC_TEXT = """
 
 
 NEKOS_TEXT = """
+**ʜᴇʀᴇ ɪs sᴏᴍᴇ ɴᴇᴋᴏs ᴄᴏᴍᴍᴀɴᴅs.**
+
 /cuddle
 /shrug
 /poke
@@ -117,5 +126,40 @@ NEKOS_TEXT = """
 
 
 GAMES_TEXT = """
+**ʜᴇʀᴇ ɪs sᴏᴍᴇ ɢᴀᴍᴇ ᴄᴏᴍᴍᴀɴᴅs.**
+
+/bet
+/rewards
+/bonus
+/topusers
 
 """
+
+
+CHATGPT_TEXT = """
+**ʜᴇʀᴇ ɪs sᴏᴍᴇ ᴀɪ ᴄᴏᴍᴍᴀɴᴅs.**
+
+/ask or /chatgpt
+/bard
+"""
+
+
+CHATBOT_TEXT = """
+soon
+"""
+
+INSTATUS_TEXT = """
+**ʜᴇʀᴇ ɪs ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀ ɪɴғᴏ ᴄᴏᴍᴍᴀɴᴅs.**
+
+/instatus 
+
+"""
+
+AFK_TEXT = """
+soon
+"""
+
+ACTION_TEXT = """
+soon
+"""
+
