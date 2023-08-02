@@ -1,12 +1,14 @@
 import openai
 from Hiroko import Hiroko
-from pyrogram import Client as client
-from pyrogram.raw.functions.messages import GetHistory
-from pyrogram.raw.functions.channels import GetFullChannel
+from pyrogram import Client
+from pyrogram.raw.functions.channels import GetFullChannel, GetMessages
+
 
 API_KEY = "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"
 
 CHANNEL_ID = -1001915298220  
+
+
 
 
 @Hiroko.on_message()
@@ -25,14 +27,13 @@ def reply_brain(client, message):
 
 def get_chat_log(client):
     # Get channel full info to access the channel chat log
-    chat = client.send(GetFullChannel(channel=CHANNEL_ID))
-    channel_chat = chat.full_chat
+    channel_info = client.send(GetFullChannel(channel=CHANNEL_ID))
+    chat_log_message_id = channel_info.full_chat.about.id
 
-    # Get chat history from the channel
-    history = client.send(GetHistory(peer=channel_chat.id, limit=1, max_id=0, offset_id=0, add_offset=0))
+    messages = client.send(GetMessages(channel=CHANNEL_ID, id=[chat_log_message_id]))
 
-    if history.messages:
-        message = history.messages[0]
+    if messages.messages:
+        message = messages.messages[0]
         if getattr(message, "message", None):
             return message.message
 
@@ -41,12 +42,13 @@ def get_chat_log(client):
 
 def generate_response(question, chat_log):
     # Use the ChatGPT API to generate a response
+    import openai
     openai.api_key = API_KEY
     completion = openai.Completion()
 
     prompt = f"{chat_log}\nYou: {question}\nHiroko:"
     response = completion.create(
-        model="text-davinci-002",
+        model="text-davinci-014",
         prompt=prompt,
         temperature=0.5,
         max_tokens=60,
@@ -64,5 +66,7 @@ def update_chat_log(chat_log, question, answer):
     
     # Update the chat log in the channel
     app.send_message(CHANNEL_ID, chat_log_template_update)
+
+
 
 
