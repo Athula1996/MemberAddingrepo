@@ -1,7 +1,7 @@
 import openai
 from dotenv import load_dotenv
 
-fileopen = open("Hiroko\\Helper\\database\\api.text","r")
+fileopen = open("Hiroko\\Helper\\database\\api.txt","r")
 API = fileopen.read()
 fileopen.close()
 
