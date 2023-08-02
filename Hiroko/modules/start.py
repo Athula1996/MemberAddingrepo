@@ -10,7 +10,7 @@ from pyrogram.errors import MessageNotModified
 from pyrogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 from Hiroko.Helper.database.chats import add_served_chat
 from Hiroko.Helper.database.users import add_served_user
-
+from Hiroko.modules.text import SHORTENER_TEXT, ADMINS_TEXT, GITHUB_TEXT, FUN_TEXT, MISC_TEXT, NEKOS_TEXT, GAMES_TEXT, CHATGPT_TEXT, CHATBOT_TEXT, INSTATUS_TEXT, AFK_TEXT, ACTION_TEXT         
 
 # ------------------------------------------------------------------------------- #
 
@@ -78,7 +78,9 @@ hiroko_buttons = [
                 ]
                 ]
 
-
+back_buttons   [[
+                    InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="help_"),                    
+                ]]
 
 # ------------------------------------------------------------------------------- #
 
@@ -150,7 +152,163 @@ async def cb_handler(client: Client, query: CallbackQuery):
   
 # ------------------------------------------------------------------------------- #
 
-    elif query.data=="about_":
+    elif query.data=="afk_":        
+        reply_markup = InlineKeyboardMarkup(back_buttons)
+        try:
+            await query.edit_message_text(
+                AFK_TEXT.format(query.from_user.first_name, query.from_user.id),
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass
+
+  
+# ------------------------------------------------------------------------------- #
+
+    elif query.data=="admins_":        
+        reply_markup = InlineKeyboardMarkup(back_buttons)
+        try:
+            await query.edit_message_text(
+                ADMINS_TEXT.format(query.from_user.first_name, query.from_user.id),
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass
+
+
+# ------------------------------------------------------------------------------- #
+
+   elif query.data=="fun_":        
+        reply_markup = InlineKeyboardMarkup(back_buttons)
+        try:
+            await query.edit_message_text(
+                FUN_TEXT.format(query.from_user.first_name, query.from_user.id),
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass 
+
+
+# ------------------------------------------------------------------------------- #
+
+   elif query.data=="github_":        
+        reply_markup = InlineKeyboardMarkup(back_buttons)
+        try:
+            await query.edit_message_text(
+                GITHUB_TEXT.format(query.from_user.first_name, query.from_user.id),
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass
+
+
+# ------------------------------------------------------------------------------- #
+
+   elif query.data=="instatus_":        
+        reply_markup = InlineKeyboardMarkup(back_buttons)
+        try:
+            await query.edit_message_text(
+                INSTATUS_TEXT.format(query.from_user.first_name, query.from_user.id),
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass
+
+
+# ------------------------------------------------------------------------------- #
+
+   elif query.data=="nekos_":        
+        reply_markup = InlineKeyboardMarkup(back_buttons)
+        try:
+            await query.edit_message_text(
+                NEKOS_TEXT.format(query.from_user.first_name, query.from_user.id),
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass
+
+
+# ------------------------------------------------------------------------------- #
+
+   elif query.data=="chatbot_":        
+        reply_markup = InlineKeyboardMarkup(back_buttons)
+        try:
+            await query.edit_message_text(
+                CHATBOT_TEXT.format(query.from_user.first_name, query.from_user.id),
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass
+
+
+# ------------------------------------------------------------------------------- #
+
+    elif query.data=="misc_":        
+        reply_markup = InlineKeyboardMarkup(back_buttons)
+        try:
+            await query.edit_message_text(
+                MISC_TEXT.format(query.from_user.first_name, query.from_user.id),
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass
+
+
+# ------------------------------------------------------------------------------- #
+
+    elif query.data=="shortener_":        
+        reply_markup = InlineKeyboardMarkup(back_buttons)
+        try:
+            await query.edit_message_text(
+                SHORTENER_TEXT.format(query.from_user.first_name, query.from_user.id),
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass
+
+
+# ------------------------------------------------------------------------------- #
+
+    elif query.data=="games_":        
+        reply_markup = InlineKeyboardMarkup(back_buttons)
+        try:
+            await query.edit_message_text(
+                GAMES_TEXT.format(query.from_user.first_name, query.from_user.id),
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass
+
+
+# ------------------------------------------------------------------------------- #
+
+    elif query.data=="chatgpt_":        
+        reply_markup = InlineKeyboardMarkup(back_buttons)
+        try:
+            await query.edit_message_text(
+                CHATGPT_TEXT.format(query.from_user.first_name, query.from_user.id),
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass
+
+
+# ------------------------------------------------------------------------------- #
+
+    elif query.data=="action_":        
+        reply_markup = InlineKeyboardMarkup(back_buttons)
+        try:
+            await query.edit_message_text(
+                ACTION_TEXT.format(query.from_user.first_name, query.from_user.id),
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass
+
+
+# ------------------------------------------------------------------------------- #
+
+    elif query.data=="maintainer_":
             await query.answer(("sᴏᴏɴ.... \n ʙᴏᴛ ᴜɴᴅᴇʀ ɪɴ ᴍᴀɪɴᴛᴀɪɴᴀɴᴄᴇ "), show_alert=True)
 
   
