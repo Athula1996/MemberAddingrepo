@@ -55,34 +55,34 @@ FUN_TEXT = """
 
 » <code>/bowling</code> :
 
-» <code>/react</code> or <code>/reaction</code> : **ʀᴇᴀᴄᴛ ᴡɪᴛʜ ᴀ ʀᴀɴᴅᴏᴍ ʀᴇᴀᴄᴛɪᴏɴ.** 
+» <code>/react</code> ᴏʀ <code>/reaction</code> : **ʀᴇᴀᴄᴛ ᴡɪᴛʜ ᴀ ʀᴀɴᴅᴏᴍ ʀᴇᴀᴄᴛɪᴏɴ.** 
 
-» <code>/aq</code> or <code>/animequotes</code> : **sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴀɴɪᴍᴇ ǫᴜᴏᴛᴇs.**
+» <code>/aq</code> ᴏʀ <code>/animequotes</code> : **sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴀɴɪᴍᴇ ǫᴜᴏᴛᴇs.**
 """
 
 
 MISC_TEXT = """
 **ʜᴇʀᴇ ɪs sᴏᴍᴇ ᴍɪsᴄ ᴄᴏᴍᴍᴀɴᴅs.**
 
-» /id: **ɢᴇᴛ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ɢʀᴏᴜᴘ ɪᴅ. ɪғ ᴜsᴇᴅ ʙʏ ʀᴇᴘʟʏɪɴɢ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ, ɢᴇᴛs ᴛʜᴀᴛ ᴜsᴇʀ's ɪᴅ.**
+» <code>/id</code> : **ɢᴇᴛ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ɢʀᴏᴜᴘ ɪᴅ. ɪғ ᴜsᴇᴅ ʙʏ ʀᴇᴘʟʏɪɴɢ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ, ɢᴇᴛs ᴛʜᴀᴛ ᴜsᴇʀ's ɪᴅ.**
 
-» /info: **ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ᴜsᴇʀ.**
+» <code>/info</code> : **ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ᴜsᴇʀ.**
 
-» /tr : **ᴛʀᴀɴsʟᴀᴛᴇ ᴛᴇxᴛ ᴡʀɪᴛᴛᴇɴ ᴏʀ ʀᴇᴘʟʏ ғᴏʀ ᴀɴʏ ʟᴀɴɢᴜᴀɢᴇ ᴛᴏ ᴛʜᴇ ɪɴᴛᴇɴᴇᴅ ʟᴀɴɢᴜᴀɢᴇ.**
+» <code>/tr</code> : **ᴛʀᴀɴsʟᴀᴛᴇ ᴛᴇxᴛ ᴡʀɪᴛᴛᴇɴ ᴏʀ ʀᴇᴘʟʏ ғᴏʀ ᴀɴʏ ʟᴀɴɢᴜᴀɢᴇ ᴛᴏ ᴛʜᴇ ɪɴᴛᴇɴᴇᴅ ʟᴀɴɢᴜᴀɢᴇ.**
 
-» /wiki : **sᴇᴀʀᴄʜ ғᴏʀ ᴛᴇxᴛ ᴡʀɪᴛᴛᴇɴ ғʀᴏᴍ ᴛʜᴇ ᴡɪᴋɪᴘᴇᴅɪᴀ sᴏᴜʀᴄᴇ.**
+» <code>/wiki</code> : **sᴇᴀʀᴄʜ ғᴏʀ ᴛᴇxᴛ ᴡʀɪᴛᴛᴇɴ ғʀᴏᴍ ᴛʜᴇ ᴡɪᴋɪᴘᴇᴅɪᴀ sᴏᴜʀᴄᴇ.**
 
-» /video 
+» <code>/video</code> :
 
-» /song
+» <code>/song</code> :
 
-» /tg or /telegraph
+» <code>/tg</code> ᴏʀ <code>/telegraph</code> :
 
-» /speedtest
+» <code>/speedtest</code> :
 
-» /admins or /staff : list of admins in the chat
+» <code>/admins</code> ᴏʀ <code>/staff</code> : **ʟɪsᴛ ᴏғ ᴀᴅᴍɪɴs ɪɴ ᴛʜᴇ ᴄʜᴀᴛ**
 
-» /bots
+» <code>/bots</code> : **ʟɪsᴛ ᴏғ ᴛʜᴇ ʙᴏᴛs ɪɴ ᴛʜᴇ ᴄʜᴀᴛ**
 
 """
 
@@ -90,37 +90,37 @@ MISC_TEXT = """
 NEKOS_TEXT = """
 **ʜᴇʀᴇ ɪs sᴏᴍᴇ ɴᴇᴋᴏs ᴄᴏᴍᴍᴀɴᴅs.**
 
-/cuddle
-/shrug
-/poke
-/facepalm
-/stare
-/pout
-/handhold
-/wave
-/blush
-/neko
-/dance
-/baka
-/bore
-/laugh
-/smug
-/thumsup
-/shoot
-/tickle
-/feed
-/think
-/wink
-/sleep
-/puch
-/cry
-/kill
-/smile
-/highfive
-/slap
-/hug
-/pat
-/waifu
+» <code>/cuddle</code> :
+» <code>/shrug</code> :
+» <code>/poke</code> :
+» <code>/facepalm</code> :
+» <code>/stare</code> :
+» <code>/pout</code> :
+» <code>/handhold</code> :
+» <code>/wave</code> :
+» <code>/blush</code> :
+» <code>/neko</code> :
+» <code>/dance</code> :
+» <code>/baka</code> :
+» <code>/bore</code> :
+» <code>/laugh</code> :
+» <code>/smug</code> : 
+» <code>/thumsup</code> :
+» <code>/shoot</code> :
+» <code>/tickle</code> :
+» <code>/feed</code> :
+» <code>/think</code> :
+» <code>/wink</code> :
+» <code>/sleep</code> :
+» <code>/puch</code> :
+» <code>/cry</code> :
+» <code>/kill</code> :
+» <code>/smile</code> :
+» <code>/highfive</code> :
+» <code>/slap</code> :
+» <code>/hug</code> :
+» <code>/pat</code> :
+» <code>/waifu</code> :
 
 """
 
@@ -128,38 +128,46 @@ NEKOS_TEXT = """
 GAMES_TEXT = """
 **ʜᴇʀᴇ ɪs sᴏᴍᴇ ɢᴀᴍᴇ ᴄᴏᴍᴍᴀɴᴅs.**
 
-/bet
-/rewards
-/bonus
-/topusers
-
+» <code>/bet</code> :
+» <code>/rewards</code> :
+» <code>/bonus</code> :
+» <code>/topusers</code> :
+» <code>/truth</code> :
+» <code>/dare</code> :
 """
 
 
 CHATGPT_TEXT = """
 **ʜᴇʀᴇ ɪs sᴏᴍᴇ ᴀɪ ᴄᴏᴍᴍᴀɴᴅs.**
 
-/ask or /chatgpt
-/bard
+» <code>/ask</code> ᴏʀ <code>/chatgpt</code> :
+» <code>/bard</code> :
+» <code>/image</code> ᴏʀ <code>/generate</code> :
 """
 
 
 CHATBOT_TEXT = """
-soon
+**ʜᴇʀᴇ ɪs ᴄʜᴀᴛʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs**
+
+<code>/chatbot</code> :
 """
+
 
 INSTATUS_TEXT = """
 **ʜᴇʀᴇ ɪs ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀ ɪɴғᴏ ᴄᴏᴍᴍᴀɴᴅs.**
 
-/instatus 
-
+» <code>/instatus</code> : **ɢᴇᴛ ᴛʜᴇ sᴛᴀᴛᴜs ᴏғ ᴏᴜʀ ᴄʜᴀᴛ ᴍᴇᴍʙᴇʀs**
 """
+
 
 AFK_TEXT = """
 soon
 """
 
+
 ACTION_TEXT = """
 soon
 """
+
+
 
