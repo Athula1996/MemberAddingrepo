@@ -78,7 +78,8 @@ hiroko_buttons = [
                 ]
                 ]
 
-back_buttons   [[
+
+back_buttons  = [[
                     InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="help_"),                    
                 ]]
 
