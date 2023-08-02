@@ -17,7 +17,7 @@ openai.api_key = "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"
 
 
 
-@Hiroko.on_message(filters.command(["chatgpt","zebra","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"]))
+@Hiroko.on_message(filters.command(["chatgpt","hiroko","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"]))
 async def chat(bot, message):
     
     try:
@@ -25,7 +25,7 @@ async def chat(bot, message):
         await bot.send_chat_action(message.chat.id, ChatAction.TYPING)
         if len(message.command) < 2:
             await message.reply_text(
-            "**ʜᴇʟʟᴏ sɪʀ**\n\n**ᴇxᴀᴍᴘʟᴇ:**\n\n`/zebra 'How to set girlfriend ?`")
+            "**ʜᴇʟʟᴏ sɪʀ**\n\n**ᴇxᴀᴍᴘʟᴇ:**\n\n`/ask or /hiroko 'How to set girlfriend ?`")
         else:
             a = message.text.split(' ', 1)[1]
             MODEL = "gpt-3.5-turbo"
