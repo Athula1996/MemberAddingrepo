@@ -53,24 +53,24 @@ HELP_TEXT = """**
 
 hiroko_buttons = [              
                 [
-                    InlineKeyboardButton("ᴀғᴋ", callback_data="about_"),   
-                    InlineKeyboardButton("ᴀᴅᴍɪɴs", callback_data="about_"),
-                    InlineKeyboardButton("ғᴜɴ", callback_data="about_")
+                    InlineKeyboardButton("ᴀғᴋ", callback_data="maintainer_"),   
+                    InlineKeyboardButton("ᴀᴅᴍɪɴs", callback_data="admins_"),
+                    InlineKeyboardButton("ғᴜɴ", callback_data="fun_")
                 ],
                 [
-                    InlineKeyboardButton("ɢɪᴛʜᴜʙ", callback_data="about_"),   
-                    InlineKeyboardButton("ɪɴsᴛᴀᴛᴜs", callback_data="about_"),
-                    InlineKeyboardButton("ɴᴇᴋᴏs", callback_data="about_")
+                    InlineKeyboardButton("ɢɪᴛʜᴜʙ", callback_data="github_"),   
+                    InlineKeyboardButton("ɪɴsᴛᴀᴛᴜs", callback_data="instatus_"),
+                    InlineKeyboardButton("ɴᴇᴋᴏs", callback_data="nekos_")
                 ],
                 [
-                    InlineKeyboardButton("ᴄʜᴀᴛʙᴏᴛ", callback_data="about_"),   
-                    InlineKeyboardButton("ᴍɪsᴄ", callback_data="about_"),
-                    InlineKeyboardButton("sʜᴏʀᴛᴇɴᴇʀ", callback_data="about_")
+                    InlineKeyboardButton("ᴄʜᴀᴛʙᴏᴛ", callback_data="maintainer_"),   
+                    InlineKeyboardButton("ᴍɪsᴄ", callback_data="misc_"),
+                    InlineKeyboardButton("sʜᴏʀᴛᴇɴᴇʀ", callback_data="shortener_")
                 ],
                 [
-                    InlineKeyboardButton("ɢᴀᴍᴇs", callback_data="about_"),   
-                    InlineKeyboardButton("ᴄʜᴀᴛɢᴘᴛ", callback_data="about_"),
-                    InlineKeyboardButton("ᴀᴄᴛɪᴏɴ", callback_data="about_")
+                    InlineKeyboardButton("ɢᴀᴍᴇs", callback_data="games_"),   
+                    InlineKeyboardButton("ᴄʜᴀᴛɢᴘᴛ", callback_data="chatgpt_"),
+                    InlineKeyboardButton("ᴀᴄᴛɪᴏɴ", callback_data="action_")
                 ],             
                 [
                     InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="home_"),
