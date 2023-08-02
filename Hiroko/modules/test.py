@@ -24,7 +24,7 @@ def ReplyBrain(question, chat_log=None):
     chat_log_template_update = chat_log + f"\nYou: {question}\nHiroko: {answer}"
     
     # Save the chat log to a file
-    with open("data\\chat_log.txt", "w") as FileLog:
+    with open("Data\\chat_log.txt", "w") as FileLog:
         FileLog.write(chat_log_template_update)
     
     return answer
