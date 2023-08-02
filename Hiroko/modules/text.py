@@ -92,31 +92,31 @@ MISC_TEXT = """
 NEKOS_TEXT = """
 **˹ʜɪꝛᴏᴋᴏ ꝛᴏʙᴏᴛ˼ ᴄᴏᴏʟ ᴏʀ ᴇxᴄʟᴜsɪᴠᴇ ғᴇᴀᴛᴜʀᴇs**
 
-» <code>/cuddle</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴄᴜᴅᴅʟᴇ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/cuddle</code> : <code>ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴄᴜᴅᴅʟᴇ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.</code>
 
-» <code>/bore</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ʙᴏʀᴇ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/bore</code> : <code>ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ʙᴏʀᴇ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.</code>
 
-» <code>/laugh</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ʟᴀᴜɢʜ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/laugh</code> : <code>ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ʟᴀᴜɢʜ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.</code>
 
-» <code>/sleep</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ sʟᴇᴇᴘ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/sleep</code> : <code>ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ sʟᴇᴇᴘ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.</code>
 
-» <code>/puch</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴘᴜᴄʜ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/puch</code> : <code>ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴘᴜᴄʜ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.</code>
 
-» <code>/cry</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴄʀʏ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/cry</code> : <code>ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴄʀʏ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.</code>
 
-» <code>/kill</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴋɪʟʟ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/kill</code> : <code>ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴋɪʟʟ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.</code>
 
-» <code>/smile</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ sᴍɪʟᴇ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/smile</code> : <code>ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ sᴍɪʟᴇ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.</code>
 
-» <code>/highfive</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ʜɪɢʜғɪᴠᴇ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/highfive</code> : <code>ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ʜɪɢʜғɪᴠᴇ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.</code>
 
-» <code>/slap</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ sʟᴀᴘ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/slap</code> : <code>ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ sʟᴀᴘ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.</code>
 
-» <code>/hug</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ʜᴜɢ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/hug</code> : <code>ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ʜᴜɢ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.</code>
 
-» <code>/pat</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴘᴀᴛ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/pat</code> : <code>ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴘᴀᴛ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.</code>
 
-» <code>/waifu</code> : **ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴡᴀɪғᴜ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.**
+» <code>/waifu</code> : <code>ʙᴏᴛ sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴡᴀɪғᴜ ɢɪғ ᴏʀ ᴘʜᴏᴛᴏ.</code>
 
 """
 
@@ -124,35 +124,35 @@ NEKOS_TEXT = """
 GAMES_TEXT = """
 **˹ʜɪꝛᴏᴋᴏ ꝛᴏʙᴏᴛ˼ ᴄᴏᴏʟ ᴏʀ ᴇxᴄʟᴜsɪᴠᴇ ғᴇᴀᴛᴜʀᴇs**
 
-» <code>/bet</code> : **ʙᴇᴛ sᴏᴍᴇ ᴄᴏɪɴs** 
+» <code>/bet</code> : <code>ʙᴇᴛ sᴏᴍᴇ ᴄᴏɪɴs</code>
 
-» <code>/rewards</code> : **ɢᴇᴛ ʀᴇᴡᴀʀᴅs ғᴏʀ ғɪʀsᴛ ᴜsᴇʀs.**
+» <code>/rewards</code> : <code>ɢᴇᴛ ʀᴇᴡᴀʀᴅs ғᴏʀ ғɪʀsᴛ ᴜsᴇʀs.</code>
 
-» <code>/bonus</code> : **ɢᴇᴛ ᴡᴇᴇᴋʟʏ ʙᴏɴᴜs.** 
+» <code>/bonus</code> : <code>ɢᴇᴛ ᴡᴇᴇᴋʟʏ ʙᴏɴᴜs.</code>
 
-» <code>/topusers</code> : **ɴᴏ. 1 ᴜsᴇʀ ᴡʜᴏ ɢᴇᴛ ᴍᴀxɪᴍᴜᴍ ᴘʀᴏғɪᴛs.**
+» <code>/topusers</code> : <code>ɴᴏ. 1 ᴜsᴇʀ ᴡʜᴏ ɢᴇᴛ ᴍᴀxɪᴍᴜᴍ ᴘʀᴏғɪᴛs.</code>
 
-» <code>/truth</code> : **sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴛʀᴜᴛʜ sᴛʀɪɴɢ.**
+» <code>/truth</code> : <code>sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴛʀᴜᴛʜ sᴛʀɪɴɢ.</code>
 
-» <code>/dare</code> : **sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴅᴀʀᴇ sᴛʀɪɴɢ.**
+» <code>/dare</code> : <code>sᴇɴᴅ ᴀ ʀᴀɴᴅᴏᴍ ᴅᴀʀᴇ sᴛʀɪɴɢ.</code>
 """
 
 
 CHATGPT_TEXT = """
 **˹ʜɪꝛᴏᴋᴏ ꝛᴏʙᴏᴛ˼ ᴄᴏᴏʟ ᴏʀ ᴇxᴄʟᴜsɪᴠᴇ ғᴇᴀᴛᴜʀᴇs**
 
-» <code>/ask</code> ᴏʀ <code>/chatgpt</code> : **ᴀsᴋ ʏᴏᴜʀ ǫᴜᴇsᴛɪᴏɴ ᴀɴᴅ ᴀɴʏ ǫᴜᴇʀʏ ᴄʜᴀᴛɢᴘᴛ sᴏʟᴠᴇᴅ ʏᴏᴜʀ ᴘʀᴏʙʟᴇᴍ.**
+» <code>/ask</code> ᴏʀ <code>/chatgpt</code> : <code>ᴀsᴋ ʏᴏᴜʀ ǫᴜᴇsᴛɪᴏɴ ᴀɴᴅ ᴀɴʏ ǫᴜᴇʀʏ ᴄʜᴀᴛɢᴘᴛ sᴏʟᴠᴇᴅ ʏᴏᴜʀ ᴘʀᴏʙʟᴇᴍ.</code>
 
-» <code>/bard</code> :**ᴀsᴋ ʏᴏᴜʀ ǫᴜᴇsᴛɪᴏɴ ᴀɴᴅ ǫᴜᴇʀʏ ɢᴏᴏɢʟᴇ ʙᴀʀᴅ sᴏʟᴠᴇ ʏᴏᴜʀ ᴘʀᴏʙʟᴇᴍ.**
+» <code>/bard</code> : <code>ᴀsᴋ ʏᴏᴜʀ ǫᴜᴇsᴛɪᴏɴ ᴀɴᴅ ǫᴜᴇʀʏ ɢᴏᴏɢʟᴇ ʙᴀʀᴅ sᴏʟᴠᴇ ʏᴏᴜʀ ᴘʀᴏʙʟᴇᴍ.</code>
 
-» <code>/image</code> ᴏʀ <code>/generate</code> : **ᴄʜᴀᴛɢᴘᴛ ɢᴇɴᴇʀᴀᴛᴇ ʀᴀɴᴅᴏᴍ ɪᴍᴀɢᴇ.**
+» <code>/image</code> ᴏʀ <code>/generate</code> : <code>ᴄʜᴀᴛɢᴘᴛ ɢᴇɴᴇʀᴀᴛᴇ ʀᴀɴᴅᴏᴍ ɪᴍᴀɢᴇ.</code>
 """
 
 
 CHATBOT_TEXT = """
 **˹ʜɪꝛᴏᴋᴏ ꝛᴏʙᴏᴛ˼ ᴄᴏᴏʟ ᴏʀ ᴇxᴄʟᴜsɪᴠᴇ ғᴇᴀᴛᴜʀᴇs**
 
-<code>/chatbot</code> : **ᴄʜᴀᴛʙᴏᴛ ᴇɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅ.**
+<code>/chatbot</code> : <code>ᴄʜᴀᴛʙᴏᴛ ᴇɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅ.</code>
 """
 
 
@@ -161,7 +161,7 @@ INSTATUS_TEXT = """
 
 **ʜᴇʀᴇ ɪs ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀ ɪɴғᴏ ᴄᴏᴍᴍᴀɴᴅs.**
 
-» <code>/instatus</code> : **ɢᴇᴛ ᴛʜᴇ sᴛᴀᴛᴜs ᴏғ ᴏᴜʀ ᴄʜᴀᴛ ᴍᴇᴍʙᴇʀs**
+» <code>/instatus</code> : <code>ɢᴇᴛ ᴛʜᴇ sᴛᴀᴛᴜs ᴏғ ᴏᴜʀ ᴄʜᴀᴛ ᴍᴇᴍʙᴇʀs</code>
 """
 
 
