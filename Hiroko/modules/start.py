@@ -178,7 +178,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
 # ------------------------------------------------------------------------------- #
 
-   elif query.data=="fun_":        
+    elif query.data=="fun_":        
         reply_markup = InlineKeyboardMarkup(back_buttons)
         try:
             await query.edit_message_text(
@@ -191,7 +191,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
 # ------------------------------------------------------------------------------- #
 
-   elif query.data=="github_":        
+    elif query.data=="github_":        
         reply_markup = InlineKeyboardMarkup(back_buttons)
         try:
             await query.edit_message_text(
@@ -204,7 +204,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
 # ------------------------------------------------------------------------------- #
 
-   elif query.data=="instatus_":        
+    elif query.data=="instatus_":        
         reply_markup = InlineKeyboardMarkup(back_buttons)
         try:
             await query.edit_message_text(
@@ -217,7 +217,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
 # ------------------------------------------------------------------------------- #
 
-   elif query.data=="nekos_":        
+    elif query.data=="nekos_":        
         reply_markup = InlineKeyboardMarkup(back_buttons)
         try:
             await query.edit_message_text(
@@ -230,7 +230,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
 # ------------------------------------------------------------------------------- #
 
-   elif query.data=="chatbot_":        
+    elif query.data=="chatbot_":        
         reply_markup = InlineKeyboardMarkup(back_buttons)
         try:
             await query.edit_message_text(
