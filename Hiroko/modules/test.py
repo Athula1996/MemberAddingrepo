@@ -1,32 +1,35 @@
+from pyrogram import filters
+from Hiroko import Hiroko
 
-import openai
-from dotenv import load_dotenv
+CHANNEL_ID = -1001234567890  # Replace with your channel ID
 
-openai.api_key = "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"
-load_dotenv()
-completion = openai.Completion()
 
-def ReplyBrain(question, chat_log=None):
-    if chat_log is None:
+@app.on_message()
+def reply_brain(client, message):
+    if message.text:
+        question = message.text
         chat_log = ""
+        
+        # Get previous chat log from the channel
+        chat_log_messages = client.get_chat_history(CHANNEL_ID, limit=1).messages
+        if chat_log_messages:
+            chat_log = chat_log_messages[0].text
+        
+        prompt = f"{chat_log}\nYou: {question}\nHiroko:"
+        
+        # Send the prompt to the channel and get response
+        response = client.send_message(CHANNEL_ID, prompt)
+        
+        if response:
+            answer = response.text
+            chat_log_template_update = f"{chat_log}\nYou: {question}\nHiroko: {answer}"
+            
+            # Update the chat log in the channel
+            client.edit_message_text(CHANNEL_ID, response.chat.id, response.message_id, chat_log_template_update)
+            
+            message.reply_text(answer)
+        else:
+            message.reply_text("Sorry, I couldn't get a response right now. Please try again later.")
 
-    prompt = f"{chat_log}You: {question}\nHiroko:"
-    response = completion.create(
-        model="text-davinci-882",
-        prompt=prompt,
-        temperature=0.5,
-        max_tokens=60,
-        top_p=0.3,
-        frequency_penalty=0.5,
-        presence_penalty=0
-    )
-    answer = response.choices[0].text.strip()
-    chat_log_template_update = chat_log + f"\nYou: {question}\nHiroko: {answer}"
-    
-    # Save the chat log to a file
-    with open("Data\\chat_log.txt", "w") as FileLog:
-        FileLog.write(chat_log_template_update)
-    
-    return answer
 
-
+            
