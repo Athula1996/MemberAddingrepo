@@ -1,7 +1,7 @@
 
 from pyrogram import Client
 
-with open("/Hiroko/Helper/Api.txt", "r") as fileopen:
+with open("Hiroko/Helper/Api.txt", "r") as fileopen:
         API = fileopen.read()
 
 
