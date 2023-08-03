@@ -8,5 +8,5 @@ BOT_USERNAME = getenv("BOT_USERNAME", "HirokoRobot")
 COMMAND_HANDLER = ["/", "!"]
 BOT_TOKEN = getenv("BOT_TOKEN", "6552685718:AAFNWz5Rk7CBeqLYT2c2ty868wW280ygm7o")
 OWNER_ID = int(getenv("OWNER_ID", "6109551937"))
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "6109551937 5416887843").split()))
+SUDO_USERS = list(map(int, getenv("SUDO_USERS", "6109551937 5416887843 5896960462").split()))
 MONGO_URL = getenv("MONGO_URI", "mongodb+srv://MrsFallenBot:MrsFallenBot@cluster0.hsedwn2.mongodb.net/?retryWrites=true&w=majority")
