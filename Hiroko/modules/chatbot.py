@@ -1,5 +1,5 @@
 
-fileopen = open("Data\\Api.txt","r")
+fileopen = open("Hiroko\Helper\\Api.txt","r")
 API = fileopen.read()
 fileopen.close()
 
@@ -12,13 +12,13 @@ completion = openai.Completion()
 
 
 def ReplyBrain(question, chat_log=None):
-    FileLog = open("", "r")  # Add the file path for chat log
+    FileLog = open("Hiroko\data.txt", "r")  # Add the file path for chat log
     chat_log_template = FileLog.read()
     FileLog.close()
 
     if chat_log is None:
         chat_log = chat_log_template
-    prompt = f"chat log: {chat_log}\nYou: {question}\nJarvis:"
+    prompt = f"{chat_log}\nYou: {question}\nJarvis:"
     response = completion.create(
         model="text-davinci-882",
         prompt=prompt,
@@ -30,7 +30,7 @@ def ReplyBrain(question, chat_log=None):
     )
     answer = response.choices[0].text.strip()
     chat_log_template_update = chat_log_template + f"\nYou: {question}\nJarvis: {answer}"
-    FileLog = open("", "w")  # Add the file path for chat log
+    FileLog = open("Hiroko\data.txt", "w")  # Add the file path for chat log
     FileLog.write(chat_log_template_update)
     FileLog.close()
     return answer
