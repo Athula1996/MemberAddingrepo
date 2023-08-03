@@ -20,10 +20,9 @@ completion = openai.Completion()
 
 
 def ReplyBrain(question, chat_log=None):
-    with open("Hiroko\data.txt", "r") as fileopen:  # Add the file path for chat log
+    with open("Hiroko/data.txt", "r") as fileopen:
     chat_log_template = fileopen.read()
-    fileopen.close()
-
+        
     if chat_log is None:
         chat_log = chat_log_template
     prompt = f"{chat_log}\nYou: {question}\nJarvis:"
@@ -40,7 +39,6 @@ def ReplyBrain(question, chat_log=None):
     chat_log_template_update = chat_log_template + f"\nYou: {question}\nJarvis: {answer}"
     with open("Hiroko\data.txt", "w") as fileopen:  # Add the file path for chat log
     fileopen.write(chat_log_template_update)
-    fileopen.close()
     return answer
 
 
