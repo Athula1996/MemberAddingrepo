@@ -1,7 +1,15 @@
 
+from pyrogram import Client
+
+with open("/Hiroko/Helper/Api.txt", "r") as fileopen:
+        API = fileopen.read()
+
+
+"""
 fileopen = open("\Hiroko\Helper\Api.txt","r")
 API = fileopen.read()
 fileopen.close()
+"""
 
 import openai
 from dotenv import load_dotenv
