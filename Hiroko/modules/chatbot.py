@@ -14,7 +14,7 @@ def reply_brain(client, message):
         question = message.text
         
         # Get previous chat log from the channel
-        chat_log = get_chat_log(app)
+        chat_log = get_chat_log(Hiroko)
 
         answer = generate_response(question, chat_log)
         update_chat_log(chat_log, question, answer)
@@ -24,10 +24,10 @@ def reply_brain(client, message):
 
 def get_chat_log(client):
     # Get channel full info to access the channel chat log
-    channel_info = app.send(GetFullChannel(channel=CHANNEL_ID))
+    channel_info = Hiroko.send(GetFullChannel(channel=CHANNEL_ID))
     chat_log_message_id = channel_info.full_chat.about.id
 
-    messages = client.send(GetMessages(channel=CHANNEL_ID, id=[chat_log_message_id]))
+    messages = Hiroko.send(GetMessages(channel=CHANNEL_ID, id=[chat_log_message_id]))
 
     if messages.messages:
         message = messages.messages[0]
