@@ -7,7 +7,7 @@ from pyrogram.raw.functions.channels import GetFullChannel, GetMessages
 
 API_KEY = "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"
 CHANNEL_ID = -1001915298220  
-
+"""
 @Hiroko.on_message()
 def reply_brain(client, message):
     if message.text:
@@ -36,7 +36,7 @@ def get_chat_log(client):
 
     return ""
 
-
+"""
 def generate_response(question, chat_log):
     # Use the ChatGPT API to generate a response
     openai.api_key = API_KEY
