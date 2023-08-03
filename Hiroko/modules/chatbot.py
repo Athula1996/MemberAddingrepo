@@ -1,5 +1,5 @@
-
-from pyrogram import Client
+from pyrogram import Client, filters
+from Hiroko import Hiroko
 
 with open("Hiroko/Helper/Api.txt", "r") as fileopen:
         API = fileopen.read()
@@ -40,5 +40,19 @@ def ReplyBrain(question, chat_log=None):
     with open("Hiroko/data.txt", "w") as fileopen:
         fileopen.write(chat_log_template_update)
     return answer
+
+
+
+@Hiroko.on_message(filters.private)
+async def reply_to_message(client : Hiroko, message):
+    user_id = message.from_user.id
+    question = message.text
+    
+    # Call ReplyBrain function to get the answer
+    answer = ReplyBrain(question)
+    
+    # Send the answer back to the user
+    await client.send_message(user_id, answer)
+
 
 
