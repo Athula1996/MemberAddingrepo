@@ -12,6 +12,7 @@ pillow==9.5.0
 pickledb<1
 pySmartDL
 pyttsx3
+pytgcalls
 pyrogram==2.0.103
 prettytable==3.6.0
 python-dotenv==1.0.0
