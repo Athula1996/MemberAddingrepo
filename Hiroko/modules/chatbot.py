@@ -1,50 +1,26 @@
 
+fileopen = open("Data\\Api.txt","r")
+API = fileopen.read()
+fileopen.close()
+
 import openai
-from Hiroko import Hiroko
-from pyrogram import Client
-from pyrogram.raw.functions.channels import GetFullChannel, GetMessages
+from dotenv import load_dotenv
+
+openai.api_key = API
+load_dotenv()
+completion = openai.Completion()
 
 
-API_KEY = "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"
-CHANNEL_ID = -1001915298220  
-"""
-@Hiroko.on_message()
-def reply_brain(client, message):
-    if message.text:
-        question = message.text
-        
-        # Get previous chat log from the channel
-        chat_log = get_chat_log(Hiroko)
+def ReplyBrain(question, chat_log=None):
+    FileLog = open("", "r")  # Add the file path for chat log
+    chat_log_template = FileLog.read()
+    FileLog.close()
 
-        answer = generate_response(question, chat_log)
-        update_chat_log(chat_log, question, answer)
-
-        message.reply_text(answer)
-
-
-def get_chat_log(client):
-    # Get channel full info to access the channel chat log
-    channel_info = Hiroko.send(GetFullChannel(channel=CHANNEL_ID))
-    chat_log_message_id = channel_info.full_chat.about.id
-
-    messages = Hiroko.send(GetMessages(channel=CHANNEL_ID, id=[chat_log_message_id]))
-
-    if messages.messages:
-        message = messages.messages[0]
-        if getattr(message, "message", None):
-            return message.message
-
-    return ""
-
-"""
-def generate_response(question, chat_log):
-    # Use the ChatGPT API to generate a response
-    openai.api_key = API_KEY
-    completion = openai.Completion()
-
-    prompt = f"{chat_log}\nYou: {question}\nHiroko:"
+    if chat_log is None:
+        chat_log = chat_log_template
+    prompt = f"chat log: {chat_log}\nYou: {question}\nJarvis:"
     response = completion.create(
-        model="text-davinci-014",
+        model="text-davinci-882",
         prompt=prompt,
         temperature=0.5,
         max_tokens=60,
@@ -53,12 +29,13 @@ def generate_response(question, chat_log):
         presence_penalty=0
     )
     answer = response.choices[0].text.strip()
-
+    chat_log_template_update = chat_log_template + f"\nYou: {question}\nJarvis: {answer}"
+    FileLog = open("", "w")  # Add the file path for chat log
+    FileLog.write(chat_log_template_update)
+    FileLog.close()
     return answer
 
-def update_chat_log(chat_log, question, answer):
-    chat_log_template_update = f"{chat_log}\nYou: {question}\nHiroko: {answer}"
-    
-    # Update the chat log in the channel
-    Hiroko.send_message(CHANNEL_ID, chat_log_template_update)
+
+
+
 
