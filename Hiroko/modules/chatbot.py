@@ -1,5 +1,5 @@
 
-fileopen = open("Hiroko\Helper\\Api.txt","r")
+fileopen = open("\Hiroko\Helper\Api.txt","r")
 API = fileopen.read()
 fileopen.close()
 
