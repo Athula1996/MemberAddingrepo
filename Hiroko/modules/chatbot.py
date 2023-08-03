@@ -5,11 +5,6 @@ with open("Hiroko/Helper/Api.txt", "r") as fileopen:
         API = fileopen.read()
 
 
-"""
-fileopen = open("\Hiroko\Helper\Api.txt","r")
-API = fileopen.read()
-fileopen.close()
-"""
 
 import openai
 from dotenv import load_dotenv
@@ -25,7 +20,7 @@ def ReplyBrain(question, chat_log=None):
         
     if chat_log is None:
         chat_log = chat_log_template
-    prompt = f"{chat_log}\nYou: {question}\nJarvis:"
+    prompt = f"{chat_log}\nYou: {question}\nHiroko:"
     response = completion.create(
         model="text-davinci-003",
         prompt=prompt,
@@ -36,7 +31,7 @@ def ReplyBrain(question, chat_log=None):
         presence_penalty=0
     )
     answer = response.choices[0].text.strip()
-    chat_log_template_update = chat_log_template + f"\nYou: {question}\nJarvis: {answer}"
+    chat_log_template_update = chat_log_template + f"\nYou: {question}\nHiroko: {answer}"
     with open("Hiroko/data.txt", "w") as fileopen:
         fileopen.write(chat_log_template_update)
     return answer
