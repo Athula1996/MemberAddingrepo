@@ -281,3 +281,18 @@ async def instatus(c: Hiroko, m: Message):
 
 # --------------------------------------------------------------------------------- #
 
+
+@Hiroko.on_message(filters.command("math", prefixes="/"))
+def calculate_math(client, message):   
+    expression = message.text.split("/math ", 1)[1]
+    try:        
+        result = eval(expression)
+        response = f"The result is: {result}"
+    except:
+        response = "Invalid expression"
+    message.reply(response)
+
+
+# --------------------------------------------------------------------------------- #
+
+
