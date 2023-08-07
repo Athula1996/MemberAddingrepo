@@ -33,11 +33,11 @@ async def get_welcome_img(
         circular_img = Image.new("RGBA", img.size, (0, 0, 0, 0))
         circular_img.paste(img, (0, 0), mask)
         resized = circular_img.resize((440, 440))
-        bg.paste(resized, (100, 140), resized)
+        bg.paste(resized, (120, 150), resized)
 
     img_draw = ImageDraw.Draw(bg)
 
-        
+"""        
     img_draw.text(
         (180, 410),
         text=str(user_id).upper(),
@@ -51,6 +51,7 @@ async def get_welcome_img(
         font=get_font(40, font_path),
         fill=(275, 275, 275),
     )
+"""
 
     path = f"./Welcome_img_{user_id}.png"
     bg.save(path)
