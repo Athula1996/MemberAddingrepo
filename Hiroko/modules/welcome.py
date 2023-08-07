@@ -59,7 +59,7 @@ async def get_welcome_img(
 
 img_draw.text(
     (180, 470),
-    text=resize_text(18, chat_name),
+    text=resize_text(18, chat_title),
     font=get_font(40, font_path),
     fill=(275, 275, 275),
 )
@@ -86,7 +86,6 @@ DEL_AFTER_WELCOME = True
 
 @Hiroko.on_message(filters.new_chat_members, group=3)
 async def _greet(client, message):
-    chat_name = chat.title
     chat = message.chat
     my_id = client.me.id
     for member in message.new_chat_members:
@@ -104,9 +103,10 @@ async def _greet(client, message):
             font_path=font_path,
             user_id=user_id,
             name=name,
-            chat_name=chat_name,
             username=username,
             profile_path=profile,
+            chat_title=chat.title
+            
         )
         welcome_caption = WELCOME_TEXT.format(
             chat_title=chat.title, name=name, username=username, user_id=user_id
