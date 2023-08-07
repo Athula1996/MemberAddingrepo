@@ -57,14 +57,12 @@ async def get_welcome_img(
     )
 
 
-img_draw.text(
-    (180, 470),
-    text=resize_text(18, chat_title),
-    font=get_font(40, font_path),
-    fill=(275, 275, 275),
-)
-
-
+    img_draw.text(
+        (180, 470),
+        text=resize_text(18, chat_title),
+        font=get_font(40, font_path),
+      fill=(275, 275, 275),
+    )
 
 
     path = f"./Welcome_img_{user_id}.png"
