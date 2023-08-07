@@ -33,7 +33,7 @@ async def get_welcome_img(
         circular_img = Image.new("RGBA", img.size, (0, 0, 0, 0))
         circular_img.paste(img, (0, 0), mask)
         resized = circular_img.resize((440, 440))
-        bg.paste(resized, (90, 100), resized)
+        bg.paste(resized, (100, 100), resized)
 
     img_draw = ImageDraw.Draw(bg)
 
@@ -47,7 +47,7 @@ async def get_welcome_img(
 
     img_draw.text(
         (180, 470),
-        text=resize_text(19, chat_name),
+        text=resize_text(20, chat_name),
         font=get_font(40, font_path),
         fill=(275, 275, 275),
     )
