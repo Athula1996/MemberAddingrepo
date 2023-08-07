@@ -70,6 +70,8 @@ WELCOME_TEXT = """
 """
 
 
+DEL_AFTER_WELCOME = True  
+
 @Hiroko.on_message(filters.new_chat_members, group=3)
 async def _greet(client, message):
     chat = message.chat
@@ -106,5 +108,7 @@ async def _greet(client, message):
 
             loop = asyncio.get_running_loop()
             loop.create_task(del_welcome_pic)
+
+
 
 
