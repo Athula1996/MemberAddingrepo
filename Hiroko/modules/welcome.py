@@ -79,7 +79,7 @@ async def _greet(client, message):
         username = member.username
         name = member.first_name if member.first_name else member.last_name
         try:
-            profile = await client.download_media(member.photo.big_file_id)
+            profile = await Hiroko.download_media(member.photo.big_file_id)
         except AttributeError:
             profile = None
         if user_id == my_id:
@@ -95,7 +95,7 @@ async def _greet(client, message):
         welcome_caption = WELCOME_TEXT.format(
             chat_title=chat.title, name=name, username=username, user_id=user_id
         )
-        msg = await client.send_message(
+        msg = await Hiroko.send_message(
             chat.id, photo=welcome_photo, caption=welcome_caption
         )
         Path(welcome_photo).unlink(missing_ok=True)
