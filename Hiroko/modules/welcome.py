@@ -2,7 +2,7 @@ import asyncio
 import os
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
-from pyrogram import Client, filters, idle
+from pyrogram import Client, filters
 from Hiroko import Hiroko
 
 
@@ -20,6 +20,7 @@ async def get_welcome_img(
     user_id: int | str,
     name: str,
     username: str,
+    chat_name: str,
     profile_path: str = None,
 ):
     bg = Image.open(bg_path)
@@ -56,14 +57,12 @@ async def get_welcome_img(
         fill=(275, 275, 275),
     )
 
-
     img_draw.text(
         (180, 470),
-        text=resize_text(18, chat_title),
+        text=resize_text(18, chat_name),
         font=get_font(40, font_path),
-      fill=(275, 275, 275),
+        fill=(275, 275, 275),
     )
-
 
     path = f"./Welcome_img_{user_id}.png"
     bg.save(path)
@@ -102,9 +101,8 @@ async def _greet(client, message):
             user_id=user_id,
             name=name,
             username=username,
+            chat_name=chat.title,  # Replace chat_title with chat.title
             profile_path=profile,
-            chat_title=chat.title
-            
         )
         welcome_caption = WELCOME_TEXT.format(
             chat_title=chat.title, name=name, username=username, user_id=user_id
@@ -119,8 +117,7 @@ async def _greet(client, message):
                 await msg.delete()
 
             loop = asyncio.get_running_loop()
-            loop.create_task(del_welcome_pic)
-
+            loop.create_task(del_welcome_pic())
 
 
 
