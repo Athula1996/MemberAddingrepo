@@ -33,7 +33,7 @@ async def get_welcome_img(
         circular_img = Image.new("RGBA", img.size, (0, 0, 0, 0))
         circular_img.paste(img, (0, 0), mask)
         resized = circular_img.resize((440, 440))
-        bg.paste(resized, (50, 140), resized)
+        bg.paste(resized, (60, 140), resized)
 
     img_draw = ImageDraw.Draw(bg)
 
