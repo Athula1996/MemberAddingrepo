@@ -37,7 +37,7 @@ async def get_welcome_img(
 
     img_draw = ImageDraw.Draw(bg)
 
-"""        
+        
     img_draw.text(
         (180, 410),
         text=str(user_id).upper(),
@@ -51,7 +51,7 @@ async def get_welcome_img(
         font=get_font(40, font_path),
         fill=(275, 275, 275),
     )
-"""
+
 
     path = f"./Welcome_img_{user_id}.png"
     bg.save(path)
