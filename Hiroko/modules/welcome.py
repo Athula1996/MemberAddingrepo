@@ -95,8 +95,8 @@ async def _greet(client, message):
         welcome_caption = WELCOME_TEXT.format(
             chat_title=chat.title, name=name, username=username, user_id=user_id
         )
-        msg = await Hiroko.send_message(
-            chat.id, photo=welcome_photo, caption=welcome_caption
+        msg = await Hiroko.send_photo(
+            chat_id=chat.id, photo=welcome_photo, caption=welcome_caption
         )
         Path(welcome_photo).unlink(missing_ok=True)
         if DEL_AFTER_WELCOME:
@@ -106,4 +106,5 @@ async def _greet(client, message):
 
             loop = asyncio.get_running_loop()
             loop.create_task(del_welcome_pic)
+
 
