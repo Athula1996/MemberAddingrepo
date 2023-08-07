@@ -60,8 +60,8 @@ async def get_welcome_img(
     return path
 
 
-bg_path = "Path of the background image"
-font_path = "path of the font"
+bg_path = "Hiroko/Helper/assests/Thumbnail.png"
+font_path = "Hiroko/Helper/assests/Hiroko.ttf"
 
 WELCOME_TEXT = """
 ᴡᴇʟᴄᴏᴍᴇ {name}
