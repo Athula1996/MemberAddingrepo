@@ -1,5 +1,6 @@
 import asyncio
-from Guardian import OWNERS, app
+from config import OWNER_ID
+from Hiroko import Hiroko
 from pyrogram import filters
 from Guardian.database.chatsdb import *
 from Guardian.database.usersdb import *
