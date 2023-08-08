@@ -8,8 +8,8 @@ from Hiroko import Hiroko
 from pyrogram.enums import ChatType
 from pyrogram.errors import MessageNotModified
 from pyrogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
-from Hiroko.Helper.database.chats import add_served_chat
-from Hiroko.Helper.database.users import add_served_user
+from Hiroko.Helper.database.chatsdb import add_served_chat
+from Hiroko.Helper.database.usersdb import add_served_user
 from Hiroko.modules.text import SHORTENER_TEXT, ADMINS_TEXT, GITHUB_TEXT, FUN_TEXT, MISC_TEXT, NEKOS_TEXT, GAMES_TEXT, CHATGPT_TEXT, CHATBOT_TEXT, INSTATUS_TEXT, AFK_TEXT, ACTION_TEXT         
 
 # ------------------------------------------------------------------------------- #
