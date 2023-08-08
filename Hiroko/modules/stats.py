@@ -2,8 +2,8 @@ from pyrogram import filters, Client
 from pyrogram.types import Message
 from config import OWNER_ID
 from Hiroko import Hiroko
-from Hiroko.Helper.database.chats import get_served_chats
-from Hiroko.Helper.database.users import get_served_users
+from Hiroko.Helper.database.chatsdb import get_served_chats
+from Hiroko.Helper.database.usersdb import get_served_users
 
 # --------------------------------------------------------------------------------- #
 
