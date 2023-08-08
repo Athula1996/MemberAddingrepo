@@ -11,7 +11,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 USER = []
 
 
-@app.on_message(filters.command(["bcast", "broadcast"]) & filters.user([6015438294, 5896960462, 6236996313]))
+@Hiroko.on_message(filters.command(["bcast", "broadcast"]) & filters.user([OWNER_ID]))
 async def _bcast(app, message):
     replied = message.reply_to_message
     user_id = message.from_user.id
@@ -123,7 +123,7 @@ async def _bcast(app, message):
     except:
         pass
         
-@app.on_callback_query(filters.regex(pattern=r"cancelbcast_(.*)"))
+@Hiroko.on_callback_query(filters.regex(pattern=r"cancelbcast_(.*)"))
 async def _cancelbcast(_, query):
     user_id = query.from_user.id
     if user_id != int(query.data.split("_")[1]):
