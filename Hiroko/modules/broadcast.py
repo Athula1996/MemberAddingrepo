@@ -2,8 +2,8 @@ import asyncio
 from config import OWNER_ID
 from Hiroko import Hiroko
 from pyrogram import filters
-from Hiroko.Helper.database.chats import *
-from Hiroko.Helper.database.users import *
+from Hiroko.Helper.database.chatsdb import *
+from Hiroko.Helper.database.usersdb import *
 from pyrogram.errors import FloodWait 
 from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
