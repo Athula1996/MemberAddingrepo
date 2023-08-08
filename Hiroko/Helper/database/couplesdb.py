@@ -1,10 +1,9 @@
-from pymongo.mongo_client import MongoClient
 from typing import Dict, List, Union
 from config import MONGO_URL
+from motor.motor_asyncio import AsyncIOMotorClient as MongoCli
 
+mongo = MongoCli(MONGO_URL).Rankings
 
-uri = "MONGO_URL"
-mongo = MongoClient(uri).Rankings
 coupledb = mongo.couple
 
    
