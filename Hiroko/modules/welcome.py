@@ -47,7 +47,7 @@ async def get_welcome_img(
 
     img_draw.text(
         (180, 370),
-        text=resize_text(80, chat_name),
+        text=resize_text(100, chat_name),
         font=get_font(40, font_path),
         fill=(275, 275, 275),
     )
