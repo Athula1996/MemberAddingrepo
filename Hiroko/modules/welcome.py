@@ -39,15 +39,15 @@ async def get_welcome_img(
 
         
     img_draw.text(
-        (790, 610),
+        (820, 610),
         text=str(user_id).upper(),
         font=get_font(60, font_path),
         fill=(275, 275, 275),
     )
 
     img_draw.text(
-        (180, 470),
-        text=resize_text(20, chat_name),
+        (180, 370),
+        text=resize_text(80, chat_name),
         font=get_font(40, font_path),
         fill=(275, 275, 275),
     )
