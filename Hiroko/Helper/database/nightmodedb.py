@@ -1,8 +1,10 @@
-from pymongo.mongo_client import MongoClient
 from typing import Dict, List, Union
+from config import MONGO_URL
+from motor.motor_asyncio import AsyncIOMotorClient as MongoCli
 
-uri = "mongodb+srv://public:abishnoimf@cluster0.rqk6ihd.mongodb.net/?retryWrites=true&w=majority"
-mongo = MongoClient(uri).Rankings
+
+mongo = MongoCli(MONGO_URL).Rankings
+
 nightdb = mongo.nightmode
 
 
