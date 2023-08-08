@@ -7,7 +7,7 @@ from pyrogram.types import InlineKeyboardButton,InlineKeyboardMarkup
 
 
 @Hiroko.on_message(filters.command("packkang"))
-async def _packkang(app,message):  
+async def _packkang(app :Hiroko,message):  
     txt = await message.reply_text("ᴘʀᴏᴄᴇssɪɴɢ....")
     if not message.reply_to_message:
         await txt.edit('ʀᴇᴘʟʏ ᴛᴏ ᴍᴇssᴀɢᴇ')
