@@ -39,9 +39,9 @@ async def get_welcome_img(
 
         
     img_draw.text(
-        (772, 610),
+        (790, 610),
         text=str(user_id).upper(),
-        font=get_font(40, font_path),
+        font=get_font(60, font_path),
         fill=(275, 275, 275),
     )
 
