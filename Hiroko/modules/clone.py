@@ -62,7 +62,7 @@ async def delete_token(bot, msg: Message):
         
         delete_token(token)
         
-        await text.edit(f"Bot token {token} has been deleted.")
+        await msg.reply(f"Bot token {token} has been deleted.")
     
     except Exception as e:
         await msg.reply(f"**ERROR:** `{str(e)}`\nPress /start to Start again.")
