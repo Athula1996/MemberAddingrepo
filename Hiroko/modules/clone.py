@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 from config import MONGO_URL
 from Hiroko import Hiroko
-from pyrogram import filters
+from pyrogram import filters, Client 
 from pyrogram.types import Message 
 
 
