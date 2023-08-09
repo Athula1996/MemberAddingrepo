@@ -39,7 +39,7 @@ async def clone(bot, msg: Message):
     
     try:
         await text.edit("Booting Your Client")
-        client = Client(":memory:", API_ID, API_HASH, bot_token=token, plugins={"root": "Hiroko.modules"})
+        client = Client(":memory:", API_ID, API_HASH, bot_token=token, plugins={"root": "Hiroko.modules."})
         await client.start()
         user = await client.get_me()
         
