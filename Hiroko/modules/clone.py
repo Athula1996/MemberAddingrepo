@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-from config import MONGO_URL
+from config import MONGO_URL, API_ID, API_HASH
 from Hiroko import Hiroko
 from pyrogram import filters, Client 
 from pyrogram.types import Message 
@@ -59,7 +59,7 @@ async def delete_token(bot, msg: Message):
     token = msg.command[1]
     
     try:
-        # Delete the bot token from the MongoDB database
+        
         delete_token(token)
         
         await text.edit(f"Bot token {token} has been deleted.")
