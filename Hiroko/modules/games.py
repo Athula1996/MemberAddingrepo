@@ -344,44 +344,26 @@ regex_upvote = r"^(?i)(\+|\+\+|\+1|thx|thanx|thanks|pro|cool|good|pero|op|nice|n
 regex_downvote = r"^(\-|\-\-|\-1|👎|noob|baka|idiot|chutiya|nub|noob|wrong|incorrect|chaprii|chapri|weak|\-100|terrible|horrible|awful|bad|disappointing|trash)$"
 
 
-
-@Hiroko.on_message(
-  filters.text
-  & filters.group
-  & filters.incoming
-  & filters.reply
-  & filters.regex(regex_upvote)
-  & ~filters.via_bot
-  & ~filters.bot,
-  group=4,
-)
-async def upvote(client,message):
+@Hiroko.on_message(filters.text & filters.group & filters.incoming & filters.reply & filters.regex(regex_upvote) & ~filters.via_bot & ~filters.bot, group=4)
+async def upvote(client, message):
     if not message.reply_to_message.from_user:
         return
     user = message.reply_to_message.from_user
     if user.id == BOT_ID:
         return
     if not await is_player(user.id):
-        await create_account(user.id,user.username)
+        await create_account(user.id, user.username)
     if user.id == message.from_user.id:
         return
     coins = await user_wallet(user.id)
     new = coins + 200
-    await gamesdb.update_one({"user_id": user.id}, {'$set':{'coins' : new}})
-    await message.reply_text("ᴀᴅᴅᴇᴅ `200` ᴅᴀʟᴄs ᴛᴏ {0} ᴡᴀʟʟᴇᴛ.\n• ᴄᴜʀʀᴇɴᴛ ʙᴀʟᴀɴᴄᴇ ✑ `{1:,}` ᴅᴀʟᴄss".format(user.mention,new))
-    
+    await gamesdb.update_one({"user_id": user.id}, {'$set': {'coins': new}})
+    await message.reply_text("ᴀᴅᴅᴇᴅ `200` ᴅᴀʟᴄs ᴛᴏ {0} ᴡᴀʟʟᴇᴛ.\n• ᴄᴜʀʀᴇɴᴛ ʙᴀʟᴀɴᴄᴇ ✑ `{1:,}` ᴅᴀʟᴄss".format(user.mention, new))
 
-@Hiroko.on_message(
-    filters.text
-    & filters.group
-    & filters.incoming
-    & filters.reply
-    & filters.regex(regex_downvote)
-    & ~filters.via_bot
-    & ~filters.me
-    & ~filters.bot,
-    group=3,  
-)
+
+
+
+@Hiroko.on_message(filters.text & filters.group & filters.incoming & filters.reply & filters.regex(regex_downvote) & ~filters.via_bot & ~filters.bot, group=4)
 async def downvote(client,message,_):
     if not message.reply_to_message.from_user:
         return
