@@ -339,7 +339,7 @@ async def _bet(client,message):
 
                                                                                                         
     
-  
+"""  
 regex_upvote = r"^(?i)(\+|\+\+|\+1|thx|thanx|thanks|pro|cool|good|pero|op|nice|noice|best|uwu|owo|right|correct|peru|piro|👍|\+100|awesome|excellent|fantastic|great|amazing|wonderful)$"
 regex_downvote = r"^(\-|\-\-|\-1|👎|noob|baka|idiot|chutiya|nub|noob|wrong|incorrect|chaprii|chapri|weak|\-100|terrible|horrible|awful|bad|disappointing|trash)$"
 
@@ -383,7 +383,7 @@ async def downvote(client,message,_):
     await message.reply_text("ᴛᴏᴏᴋ `200` ᴅᴀʟᴄs ғʀᴏᴍ {𝟶} ᴡᴀʟʟᴇᴛ.\n• ᴄᴜʀʀᴇɴᴛ ʙᴀʟᴀɴᴄᴇ ✑ `{𝟷:,}` ᴅᴀʟᴄs".format(user.mention,new))
     
     
-    
+    """"
 
 @Hiroko.on_message(filters.command("pay") & filters.group)
 async def _pay(client,message):
