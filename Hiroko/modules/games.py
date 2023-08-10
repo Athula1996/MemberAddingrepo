@@ -1,19 +1,23 @@
+import json
+import asyncio
 import datetime,pymongo
 import config,random
-from TeleBot import pgram as app,get_readable_time,BOT_ID
-from config import SUPREME_USERS
+from Hiroko import Hiroko
+from config import SUDO_USER as SUPREME_USERS, MONGO_URL
 from pyrogram import filters
-from TeleBot.modules.mongo.games_db import *
-import asyncio
-import json
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
 # ------ db codes -------
-import datetime
-from TeleBot import db
 
-gamesdb = db.games
+
+
+client = pymongo.MongoClient(MONGO_URL)
+database = client["mydatabase"]
+
+gamesdb = database["games"]
+
+
 
 async def create_account(user_id,user_name):
   dic = {
@@ -88,7 +92,9 @@ async def can_collect(user_id):
     current_time = datetime.datetime.now()
     time_since_last_collection = current_time - last_collection_time
     return (time_since_last_collection.total_seconds() >= 7 * 24 * 60 * 60,7 * 24 * 60 * 60 - time_since_last_collection.total_seconds())
-# ------ db codes ------
+
+
+
 
 
 
@@ -106,7 +112,7 @@ async def get_user_won(emoji,value):
     return u_won
 
 
-@app.on_message(filters.command("daily"))
+@Hiroko.on_message(filters.command("daily"))
 async def _daily(client,message):
     user_id = message.from_user.id
     if not await is_player(user_id):
@@ -121,7 +127,7 @@ async def _daily(client,message):
     
     
     
-@app.on_message(filters.command("weekly"))
+@Hiroko.on_message(filters.command("weekly"))
 async def _weekly(client,message):
     user_id = message.from_user.id
     if not await is_player(user_id):
@@ -154,7 +160,7 @@ TRIVIA_DICT = {}
 
 
     
-@app.on_message(filters.command("bet"))
+@Hiroko.on_message(filters.command("bet"))
 async def _bet(client,message):
   chat_id = message.chat.id
   user = message.from_user
@@ -206,7 +212,7 @@ async def _bet(client,message):
       return await message.reply_text("✅ ᴛʜᴇ ᴄᴏɪɴ ʟᴀɴᴅᴇᴅ ᴏɴ {0}!\nʏᴏᴜ ᴡᴏɴ `{1:,}` ᴄᴏɪɴs\nᴛᴏᴛᴀʟ ʙᴀʟᴀɴᴄᴇ : `{2:,}` ᴅᴀʟᴄs".format(rnd,to_bet,new_wallet)) 
      
 
-@app.on_message(filters.command("dart"))
+@Hiroko.on_message(filters.command("dart"))
 async def _bet(client,message):
   chat_id = message.chat.id
   user = message.from_user
@@ -247,7 +253,7 @@ async def _bet(client,message):
       return await msg.edit("✅ ᴡᴏᴡ! ʏᴏᴜ ᴡᴏɴ `{0:,}` ᴅᴀʟᴄs\n• ᴄᴜʀᴇᴇɴᴛ ʙᴀʟᴀɴᴄᴇ ✑ `{1:,}`ᴅᴀʟᴄs.".format(to_bet,new_wallet))
      
       
-@app.on_message(filters.command("bowl"))
+@Hiroko.on_message(filters.command("bowl"))
 async def _bet(client,message):
   chat_id = message.chat.id
   user = message.from_user
@@ -288,7 +294,7 @@ async def _bet(client,message):
       return await msg.edit("✅ ᴡᴏᴡ! ʏᴏᴜ ᴡᴏɴ `{0:,}` ᴅᴀʟᴄs\n• ᴄᴜʀᴇᴇɴᴛ ʙᴀʟᴀɴᴄᴇ ✑ `{1:,}` ᴅᴀʟᴄs.".format(to_bet,new_wallet))
   
 
-@app.on_message(filters.command("basket"))
+@Hiroko.on_message(filters.command("basket"))
 async def _bet(client,message):
   chat_id = message.chat.id
   user = message.from_user
@@ -334,7 +340,7 @@ async def _bet(client,message):
 regex_upvote = r"^((?i)\+|\+\+|\+1|thx|thanx|thanks|pro|cool|good|pro|pero|op|nice|noice|best|uwu|owo|right|correct|peru|piro|👍|\+100)$"
 regex_downvote = r"^(\-|\-\-|\-1|👎|noob|baka|idiot|chutiya|nub|noob|wrong|incorrect|chaprii|chapri|weak|\-100)$"
 
-@app.on_message(
+@Hiroko.on_message(
   filters.text
   & filters.group
   & filters.incoming
@@ -360,7 +366,7 @@ async def upvote(client,message):
     await message.reply_text("ᴀᴅᴅᴇᴅ `200` ᴅᴀʟᴄs ᴛᴏ {0} ᴡᴀʟʟᴇᴛ.\n• ᴄᴜʀʀᴇɴᴛ ʙᴀʟᴀɴᴄᴇ ✑ `{1:,}` ᴅᴀʟᴄss".format(user.mention,new))
     
 
-@app.on_message(
+@Hiroko.on_message(
     filters.text
     & filters.group
     & filters.incoming
@@ -392,7 +398,7 @@ async def downvote(client,message,_):
     
     
 
-@app.on_message(filters.command("pay") & filters.group)
+@Hiroko.on_message(filters.command("pay") & filters.group)
 async def _pay(client,message):
     if not message.reply_to_message:
         return await message.reply_text("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ")
@@ -430,7 +436,7 @@ async def _pay(client,message):
     await message.reply_text("sᴜᴄᴄᴇss! {0} ᴘᴀɪᴅ {1:,} ᴅᴀʟᴄs ᴛᴏ {2}.".format(from_user.mention,amount,to_user.mention))
 
 
-@app.on_message(filters.command(["top","leaderboard"]))
+@Hiroko.on_message(filters.command(["top","leaderboard"]))
 async def _top(client,message): 
     x = gamesdb.find().sort("coins", pymongo.DESCENDING)
     msg = "**📈 GLOBAL LEADERBOARD | 🌍**\n\n"
@@ -460,7 +466,7 @@ async def _top(client,message):
             counter += 1
     await message.reply(msg,disable_web_page_preview=True)
     
-@app.on_message(filters.command(["bal","balance","dalcs"]))
+@Hiroko.on_message(filters.command(["bal","balance","dalcs"]))
 async def _bal(client,message):
     user = message.from_user
     if not await is_player(user.id):
@@ -470,7 +476,7 @@ async def _bal(client,message):
 
     
     
-@app.on_message(filters.command("set_dalcs"))
+@Hiroko.on_message(filters.command("set_dalcs"))
 async def _bal(client,message):
     user = message.from_user
     if user.id not in SUPREME_USERS:
