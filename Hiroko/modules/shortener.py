@@ -5,8 +5,8 @@ from pyrogram.types import Message, ChatMemberUpdated
 from Hiroko import Hiroko as Shortener
 
 
-DATABASE_URL = ""
-DATABASE_NAME = ""
+DATABASE_URL = "mongodb+srv://MrsFallenBot:MrsFallenBot@cluster0.hsedwn2.mongodb.net/?retryWrites=true&w=majority"
+DATABASE_NAME = "MrsFallenBot"
 
 
 import logging
