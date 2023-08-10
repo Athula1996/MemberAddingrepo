@@ -110,18 +110,16 @@ async def userstatus(user_id):
 
 # --------------------------------------------------------------------------------- #
 
-
-@Hiroko.on_message(filters.command(["pinfo","puserinfo"]))
+@Hiroko.on_message(filters.command(["pinfo", "puserinfo"]))
 async def userinfo(_, message):
+    chat_id = message.chat.id
+    user_id = message.from_user.id
     
-     chat_id = message.chat.id
-     user_id = message.from_user.id
-     if not message.reply_to_message and len(message.command) == 2:
-         
-         try:
+    if not message.reply_to_message and len(message.command) == 2:
+        try:
             user_id = message.text.split(None, 1)[1]
             user_info = await Hiroko.get_chat(user_id)
-            user = await Hiroko.get_users(user_id)            
+            user = await Hiroko.get_users(user_id)
             status = await userstatus(user.id)
             id = user_info.id
             dc_id = user.dc_id
@@ -131,18 +129,18 @@ async def userinfo(_, message):
             bio = user_info.bio
             photo = await Hiroko.download_media(user.photo.big_file_id)
             welcome_photo = await get_welcome_img(
-            bg_path=bg_path,
-            font_path=font_path,
-            user_id=user_id,                
-            profile_path=photo,
-        ) 
-            await Hiroko.send_photo(chat_id,photo=welcome_photo, caption=INFO_TEXT.format(
-id,name, username, mention, status, dc_id, bio),reply_to_message_id=message.id)
-         except Exception as e:
-              await message.reply_text(str(e))
+                bg_path=bg_path,
+                font_path=font_path,
+                user_id=user_id,
+                profile_path=photo,
+            )
+            await Hiroko.send_photo(chat_id, photo=welcome_photo, caption=INFO_TEXT.format(
+                id, name, username, mention, status, dc_id, bio), reply_to_message_id=message.id)
+        except Exception as e:
+            await message.reply_text(str(e))
     
-     elif not message.reply_to_message:
-         try:
+    elif not message.reply_to_message:
+        try:
             user_info = await Hiroko.get_chat(user_id)
             user = await Hiroko.get_users(user_id)
             status = await userstatus(user.id)
@@ -154,39 +152,40 @@ id,name, username, mention, status, dc_id, bio),reply_to_message_id=message.id)
             bio = user_info.bio
             photo = await Hiroko.download_media(user.photo.big_file_id)
             welcome_photo = await get_welcome_img(
-            bg_path=bg_path,
-            font_path=font_path,
-            user_id=user_id,                
-            profile_path=photo,
-        )  
-            await Hiroko.send_photo(chat_id,photo=welcome_photo, caption=INFO_TEXT.format(
-id,name, username, mention,status, dc_id, bio),reply_to_message_id=message.id)
-         except Exception as e:
-              await message.reply_text(str(e))
-     elif message.reply_to_message:
-          user_id = message.reply_to_message.from_user.id
-          try:
+                bg_path=bg_path,
+                font_path=font_path,
+                user_id=user_id,
+                profile_path=photo,
+            )
+            await Hiroko.send_photo(chat_id, photo=welcome_photo, caption=INFO_TEXT.format(
+                id, name, username, mention, status, dc_id, bio), reply_to_message_id=message.id)
+        except Exception as e:
+            await message.reply_text(str(e))
+    
+    elif message.reply_to_message:
+        user_id = message.reply_to_message.from_user.id
+        try:
             user_info = await Hiroko.get_chat(user_id)
             user = await Hiroko.get_users(user_id)
             status = await userstatus(user.id)
             id = user_info.id
-            dc_id = user.dc_id        
+            dc_id = user.dc_id
             name = user_info.first_name
             username = user_info.username
             mention = user.mention
             bio = user_info.bio
             photo = await Hiroko.download_media(message.reply_to_message.from_user.photo.big_file_id)
             welcome_photo = await get_welcome_img(
-            bg_path=bg_path,
-            font_path=font_path,
-            user_id=user_id,                
-            profile_path=photo,
-        )   
-            await Hiroko.send_photo(chat_id,photo=welcome_photo,caption=INFO_TEXT.format(
-id,name, username, mention,status, dc_id, bio),reply_to_message_id=message.id)
-          except Exception as e:
-              await message.reply_text(str(e))
+                bg_path=bg_path,
+                font_path=font_path,
+                user_id=user_id,
+                profile_path=photo,
+            )
+            await Hiroko.send_photo(chat_id, photo=welcome_photo, caption=INFO_TEXT.format(
+                id, name, username, mention, status, dc_id, bio), reply_to_message_id=message.id)
+        except Exception as e:
+            await message.reply_text(str(e))
 
 
-         
-    
+
+
