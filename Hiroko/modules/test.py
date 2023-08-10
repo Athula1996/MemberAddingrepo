@@ -12,8 +12,6 @@ from pyrogram.types import Message
 
 
 
-
-
 get_font = lambda font_size, font_path: ImageFont.truetype(font_path, font_size)
 resize_text = (
     lambda text_size, text: (text[:text_size] + "...").upper()
@@ -25,13 +23,17 @@ resize_text = (
 async def get_welcome_img(
     bg_path: str,
     font_path: str,
-    user_id: int | str,
+    user_id: Union[int, str],
     name: str,
     username: str,
-    chat_name: str,
-    profile_path: str = None,
+    mention: str,
+    status: str,
+    dc_id: int,
+    bio: str,
+    profile_path: Optional[str] = None
 ):
     bg = Image.open(bg_path)
+
     if profile_path:
         img = Image.open(profile_path)
         mask = Image.new("L", img.size, 0)
@@ -45,21 +47,19 @@ async def get_welcome_img(
 
     img_draw = ImageDraw.Draw(bg)
 
-        
     img_draw.text(
         (890, 595),
         text=str(user_id).upper(),
         font=get_font(60, font_path),
-        fill=(275, 275, 275),
+        fill=(255, 255, 255),
     )
 
     img_draw.text(
         (180, 340),
         text=resize_text(60, name),
         font=get_font(100, font_path),
-        fill=(275, 275, 275),
+        fill=(255, 255, 255),
     )
-
 
     path = f"./Welcome_img_{user_id}.png"
     bg.save(path)
