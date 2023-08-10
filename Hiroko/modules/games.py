@@ -340,8 +340,9 @@ async def _bet(client,message):
                                                                                                         
     
     
-regex_upvote = r"^((?i)\+|\+\+|\+1|thx|thanx|thanks|pro|cool|good|pro|pero|op|nice|noice|best|uwu|owo|right|correct|peru|piro|👍|\+100)$"
+regex_upvote = r"^(?i)(\+|\+\+|\+1|thx|thanx|thanks|pro|cool|good|pero|op|nice|noice|best|uwu|owo|right|correct|peru|piro|👍|\+100)$"
 regex_downvote = r"^(\-|\-\-|\-1|👎|noob|baka|idiot|chutiya|nub|noob|wrong|incorrect|chaprii|chapri|weak|\-100)$"
+
 
 @Hiroko.on_message(
   filters.text
