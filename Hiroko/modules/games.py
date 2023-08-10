@@ -8,6 +8,8 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
+BOT_ID = 6552685718
+
 # ------ db codes -------
 
 
