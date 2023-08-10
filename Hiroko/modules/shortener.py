@@ -3,7 +3,10 @@ import motor.motor_asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Message, ChatMemberUpdated
 from Hiroko import Hiroko as Shortener
-from Hiroko.modules.games import DATABASE_URL, DATABASE_NAME
+
+
+DATABASE_URL = ""
+DATABASE_NAME = ""
 
 
 import logging
