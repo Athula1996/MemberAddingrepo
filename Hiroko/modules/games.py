@@ -3,6 +3,7 @@ import asyncio
 import datetime,pymongo
 import config,random
 from Hiroko import Hiroko
+from Hiroko.modules.ping import get_readable_time
 from config import SUDO_USER as SUPREME_USERS, MONGO_URL
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
